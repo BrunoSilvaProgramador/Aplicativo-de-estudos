@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale-1.0">
+    <title>App de Estudos</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <body>
+        
+        <!--Tela de alert, esta é uma alternativa ao alert do js, utitlizada simplesmente como uma personalização-->
+    
+        <div class="fundo-tela-de-alert">
+            <div class="tela-de-alert">
+                <img src="imagens/atencao.png" alt="" class="alert-atencao">
+                <img src="imagens/verificado.png" alt="" class="alert-verificado">
+                <h2 class="titulo-alert">Oops...</h2>
+                <p class="texto-alert">VOCE ESTA ERRADO</p>
+                <button class="confirmar-alert" onclick="alert()">OK</button>
+            </div><!--tela-de-alert-->
+        </div><!--fundo-tela-de-alert-->
+    
+    
+        <!--background-home é a tela principal com todas as suas funções-->
+    
+        <div class="background-home">
+            <div class="header-home"><h2>AULAS GRATUITAS DE ENSINO</h2></div><!--header-home-->
+    
+            <div class="container-perfil">
+                <div class="perfil">
+                    <button class="imagem-perfil" onclick="perfil()"></button>
+                    <button class="nome-perfil" onclick="perfil()">Bruno Rafael</button>
+                </div><!--perfil-->
+                <div class="opcoes-perfil">
+                    <button class="sair_perfil" onclick="sair_perfil()">Sair</button>
+                    <button class="dados_perfil" onclick="senha_perfil()">Alterar senha</button>
+                    <button class="voltar-perfil" onclick="voltar()"><img src="imagens/x.png" alt=""></button> <!--BOTAO DE VOLTAR-->
+                </div><!--opcoes-perfil-->
+            </div><!--container-perfil-->
+    
+            <div class="alterar-senha"> <!--box para alteração da senha de login-->
+    
+                <div class="alert-senha"> <!--alert personalizado exclusivamente para a alteração da senha-->
+                    <img src="imagens/atencao.png" alt="">
+                    <h2>REALMENTE DESEJA ALTERAR SUA SENHA? </h2>
+                    <div class="confirmar">
+                        <button class="confirmar-alert" onclick="cancelar_alert()">CANCELAR</button>
+                        <button class="confirmar-alert" onclick="confirmar_alert()">CONFIRMAR</button>
+                    </div><!--confirmar-->             
+                </div><!--alert-senha-->
+    
+                <div class="box-alterar-senha">
+                    <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+                    
+                    <div class="header-senha">Alterar senha</div>
+                    <div class="main-alterar-senha">
+                        <input type="password" id="confirmar-para-alterar" placeholder="Confirme sua senha">
+                        <input type="password" id="nova-senha" placeholder="Nova senha">
+                        <input type="password" id="confirmar-nova-senha" placeholder="Confirme a nova senha">
+                        <input type="button" onclick="confirmar_alterar();" value="Confirmar">
+                    </div><!--main-alterar-senha-->
+                </div><!--box-alterar-senha-->
+            </div><!--alterar-senha-->
+    
+            <!-- -------------------desktop-------------------- -->
+            
+            <!--conteudo da pagina principal responsiva destinada ao desktop-->
+    
+            <div class="main-home">
+    
+                <div class="box-home ">
+                    <button class="imagem-box-home imagem-professor" onclick="professor()"></button><!--imagem-box-home-->
+                    <button class="texto-box-home" onclick="professor()">
+                        PROFESSOR(A)
+                    </button><!--texto-box-home-->
+                </div><!--box-home imagem-professor-->
+    
+                <div class="box-home" >
+                    <button class="imagem-box-home imagem-aluno" onclick="aluno()"></button><!--imagem-box-home-->
+                    <button class="texto-box-home" onclick="aluno()">
+                        ALUNO(A)
+                    </button><!--texto-box-home-->
+                </div><!--box-home imagem-aluno-->
+    
+                <div class="box-home">
+                    <button class="imagem-box-home imagem-duvidas" onclick="duvidas()"></button><!--imagem-box-home--> 
+                    <button class="texto-box-home" onclick="duvidas()">
+                        DÚVIDAS FREQUENTES
+                    </button><!--texto-box-home-->
+                </div><!--box-home imagem-duvidas-->
+    
+                <div class="box-home">
+                    <button class="imagem-box-home imagem-redes" onclick="redes()"></button><!--imagem-box-home-->
+                    <button class="texto-box-home" onclick="redes()">
+                        REDES SOCIAIS
+                    </button><!--texto-box-home-->  
+                </div><!--box-home imagem-redes-->
+    
+            </div><!--main-home-->
+    
+            <!-- -------------------tablet-------------------- -->
+    
+            <!--conteudo da pagina principal responsiva destinada ao tablet ou tela medianas-->
+    
+            <div class="main-home-tablet">
+                <div class="container-tablet1">
+    
+                    <div class="box-home ">
+                        <button class="imagem-box-home imagem-professor" onclick="professor()"></button><!--imagem-box-home-->
+                        <button class="texto-box-home" onclick="professor()">
+                            PROFESSOR(A)
+                        </button><!--texto-box-home-->
+                    </div><!--box-home imagem-professor-->
+    
+                    <div class="box-home" >
+                        <button class="imagem-box-home imagem-aluno" onclick="aluno()"></button><!--imagem-box-home-->
+                        <button class="texto-box-home" onclick="aluno()">
+                            ALUNO(A)
+                        </button><!--texto-box-home-->
+                    </div><!--box-home imagem-aluno-->
+    
+                </div><!--container-tablet1-->
+    
+                <div class="container-tablet2">
+    
+                    <div class="box-home">
+                        <button class="imagem-box-home imagem-duvidas" onclick="duvidas()"></button><!--imagem-box-home--> 
+                        <button class="texto-box-home" onclick="duvidas()">
+                            DÚVIDAS FREQUENTES
+                        </button><!--texto-box-home-->
+                    </div><!--box-home imagem-duvidas-->
+    
+                    <div class="box-home">
+                        <button class="imagem-box-home imagem-redes" onclick="redes()"></button><!--imagem-box-home-->
+                        <button class="texto-box-home" onclick="redes()">
+                            REDES SOCIAIS
+                        </button><!--texto-box-home-->  
+                    </div><!--box-home imagem-redes-->
+    
+                </div><!--container-tablet2-->
+    
+            </div><!--main-home-tablet-->
+    
+    
+            <!-- -------------------mobile-------------------- -->
+    
+            <!--conteudo da pagina principal responsiva destinada ao mobile-->
+    
+            <div class="main-home-mobile">
+    
+                <div class="imagem-mobile"></div><!--imagem-mobile-->
+    
+                <div class="box-mobile imagem-professor">                    
+                    <button class="texto-box-home" onclick="professor()">
+                        PROFESSOR(A)
+                    </button><!--texto-box-home-->
+                </div><!--box-mobile imagem-professor-->
+    
+                <div class="box-mobile imagem-aluno" >
+                    <button class="texto-box-home" onclick="aluno()">
+                        ALUNO(A)
+                    </button><!--texto-box-home-->
+                </div><!--box-home imagem-aluno-->
+    
+                <div class="box-mobile imagem-duvidas">
+                    <button class="texto-box-home" onclick="duvidas()">
+                        DÚVIDAS FREQUENTES
+                    </button><!--texto-box-home-->
+                </div><!--box-home imagem-duvidas-->
+    
+                <div class="box-mobile imagem-redes">
+                    <button class="texto-box-home" onclick="redes()">
+                        REDES SOCIAIS
+                    </button><!--texto-box-home-->  
+                </div><!--box-home imagem-redes-->
+    
+            </div><!--main-home-mobile-->
+    
+            <!-- ------------------------------------------------ -->
+    
+            <div class="login">
+                <button class="logar" onclick="logar()">LOGIN</button>
+                <button class="cadastrar" onclick="cadastrar()">CADASTRAR</button>
+            </div><!--login-->
+    
+            <div class="creditos">Desenvolvido por Bruno Rafael</div><!--creditos-->
+    
+        </div><!--background-home-->
+    
+        <!-- ------------------TELA DE LOGIN-------------------- -->
+    
+        <div class="tela-de-login">
+          <div class="box-form-login">
+            <form class="box-login">
+                <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
+    
+                <div class="titulo"><h2>TELA DE LOGIN</h2></div>
+    
+                <input type="email" id="email" placeholder="Digite seu email">
+                <input type="password"  id="password" placeholder="Digite sua senha">
+                <input type="button" id="enviar" value="Enviar" onclick="enviar_login()">
+    
+            </form><!--box-login-->
+            
+            <p class="ja-possui-conta">Novo por aqui? <button onclick="cadastrar()" class="cadastre-se">Cadastre-se</button></p>
+          </div><!--box-form-login-->
+            
+        </div><!--tela de login-->
+    
+        <!-- ------------------TELA DE CADASTRO-------------------- -->
+    
+        <div class="tela-de-cadastro">
+            <div class="box-form-cadastro">
+                <form class="box-cadastro">
+    
+                    <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+        
+                    <div class="titulo"><h2>TELA DE CADASTRO</h2></div>
+        
+                    <input type="text" id="nome" placeholder="Nome" required>
+                    <input type="email" id="email-cadastro" placeholder="Email" required>
+                    <input type="password"  id="password-cadastro" placeholder="Senha" required>
+                    <input type="password"  id="password-confirmar" placeholder="Confirme sua senha" required>
+                    <input type="text" id="name-id" placeholder="Name ID" maxlength="12" required>
+        
+                    <div class="situacao"> <!--ESCOLHER PROFESSOR OU ALUNO-->
+        
+                        <div class="box-situacao">
+                            <input type="radio" name="alunoprofessor" id="aluno" value="aluno">
+                            <label for="aluno">Aluno</label>
+                        </div><!--box-situacao1-->
+        
+                        <div class="box-situacao">
+                            <input type="radio" name="alunoprofessor" id="professor" value="professor">
+                            <label for="professor">Professor</label>
+                        </div><!--box-situacao2-->
+        
+                    </div><!--situacao -->
+        
+                    <input type="button" id="enviar-cadastro" value="Enviar" onclick="enviar_cadastro()">
+                    
+                </form><!--box-cadastro-->
+                <p class="ja-possui-conta">Já possui uma conta? <button onclick="logar()" class="cadastre-se">Entrar</button></p>
+            </div><!--box-form-cadastro-->
+        </div><!--tela de cadastro-->
+    
+        
+        <!-- -------------------matérias-------------------- -->
+    
+        <div class="background-materia">
+            <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+    
+            <div class="header-materias"><h2>Matérias</h2></div><!--header-materias-->
+    
+            <div class="main-materias">
+                <div class="grade-materias">
+                    <button class="container-materia materia-portugues" onclick="portugues()"></button><!--container-materia-->
+                    <button class="container-materia materia-matematica" onclick="matematica()"></button><!--container-materia-->
+                    <button class="container-materia materia-biologia" onclick="biologia()"></button><!--container-materia-->
+                    <button class="container-materia materia-fisica" onclick="fisica()"></button><!--container-materia-->
+                    <button class="container-materia materia-quimica" onclick="quimica()"></button><!--container-materia-->
+                    <button class="container-materia materia-filosofia" onclick="filosofia()"></button><!--container-materia-->
+                    <button class="container-materia materia-ingles" onclick="ingles()"></button><!--container-materia-->
+                    <button class="container-materia materia-espanhol" onclick="espanhol()"></button><!--container-materia-->
+                    <button class="container-materia materia-geografia" onclick="geografia()"></button><!--container-materia-->
+                    <button class="container-materia materia-historia" onclick="historia()"></button><!--container-materia-->
+                    <button class="container-materia materia-sociologia" onclick="sociologia()"></button><!--container-materia-->
+                    <button class="container-materia materia-ed-fisica" onclick="ed_fisica()"></button><!--container-materia-->
+                    <button class="container-materia materia-artes" onclick="artes()"></button><!--container-materia-->
+                    <button class="container-materia materia-literatura" onclick="literatura()"></button><!--container-materia-->
+                    <button class="container-materia materia-programacao" onclick="programacao()"></button><!--container-materia-->
+                    <button class="container-materia materia-photoshop" onclick="photoshop()"></button><!--container-materia-->
+                    <button class="container-materia materia-meio-ambiente" onclick="meio_ambiente()"></button><!--container-materia-->
+                    <button class="container-materia materia-ed-financeira" onclick="ed_financeira()"></button><!--container-materia-->
+                    <button class="container-materia materia-redacao" onclick="redacao()"></button><!--container-materia-->
+                    <button class="container-materia materia-enem" onclick="enem()"></button><!--container-materia-->               
+                </div><!--grade-materias-->      
+            </div><!--main-materias-->
+    
+            <div class="footer-materias">Desenvolvido por Bruno Rafael</div>
+        </div><!--background-materia-->
+    
+        <div class="background-conteudo-materias">
+            <h2 class="titulo-background-conteudo-materias"></h2>
+    
+            <div class="background-conteudo-materia materia_portugues"></div>
+            <div class="background-conteudo-materia materia_matematica"></div>
+            <div class="background-conteudo-materia materia_biologia"></div>  
+            <div class="background-conteudo-materia materia_fisica"></div>
+            <div class="background-conteudo-materia materia_quimica"></div> 
+            <div class="background-conteudo-materia materia_filosofia"></div>
+            <div class="background-conteudo-materia materia_ingles"></div>
+            <div class="background-conteudo-materia materia_espanhol"></div>
+            <div class="background-conteudo-materia materia_geografia"></div>
+            <div class="background-conteudo-materia materia_historia"></div>
+            <div class="background-conteudo-materia materia_sociologia"></div>
+            <div class="background-conteudo-materia materia_ed_fisica"></div> 
+            <div class="background-conteudo-materia materia_artes"></div>
+            <div class="background-conteudo-materia materia_literatura"></div>
+            <div class="background-conteudo-materia materia_programacao"></div>
+            <div class="background-conteudo-materia materia_photoshop"></div> 
+            <div class="background-conteudo-materia materia_meio_ambiente"></div>
+            <div class="background-conteudo-materia materia_ed_financeira"></div> 
+            <div class="background-conteudo-materia materia_redacao"></div>
+            <div class="background-conteudo-materia materia_enem"></div>
+    
+            
+    
+            <button class="voltar-materias" onclick="voltar_materias()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+              
+            <button class="criar criars" onclick="criar()"><p>+</p></button>
+    
+            <div class="adicionar-conteudo">
+                <div class="inputs-adicionar-conteudo">
+                    <input type="text" id="titulo" placeholder="Titulo" maxlength="20">
+                    <input type="text" id="sinopse" maxlength="80" placeholder="Sinopse">
+                    <textarea name="cont" id="cont" cols="45" rows="25" placeholder="Digite somente o conteúdo"></textarea>
+                    <button class="adicionar" onclick="adicionar()">Adicionar</button>
+                </div><!--inputs-adicionar-conteudo-->  
+                <button class="criar" onclick="voltar_conteudo()" style="background-color: red;"><p>-</p></button> 
+            </div><!--adicionar-conteudo-->
+        </div><!--background-conteudo-materia-->   
+        <div class="tela-conteudo">
+            <button class="voltar-materias" onclick="voltar_conteudo()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+            <h2 class="titulo-tela-conteudo"></h2>
+            <h4 class="sinopse-tela-conteudo"></h3>
+            <p class="texto-tela-conteudo"></p>
+        </div><!--tela-conteudo-->
+    
+    
+        <!-- -------------------tela de duvidas---------------------- -->
+    
+        <div class="background-duvidas">
+            
+            <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+    
+            <header class="header-duvidas">DÚVIDAS FREQUENTES</header>
+            <div class="container-duvidas">
+                <button class="perguntas ap_perguntas0" onclick="aparecer_resposta0()">
+                    <p>É necessário efetuar login para ver as matérias?</p>
+                </button><!--perguntas-->
+                <button class="perguntas sa_perguntas0" onclick="sair_resposta0()">
+                    <p>É necessário efetuar login para ver as matérias?</p>
+                </button><!--perguntas-->
+                <div class="respostas resp0">
+                    <p>Sim, só é possível após realizar o login ou cadastro.</p>
+                </div><!--respostas-->
+            </div><!--container-duvidas-->
+    
+            <div class="container-duvidas">
+                <button class="perguntas ap_perguntas1" onclick="aparecer_resposta1()">
+                    <p>Posso criar conteúdos sendo aluno?</p>
+                </button><!--perguntas-->
+                <button class="perguntas sa_perguntas1" onclick="sair_resposta1()">
+                    <p>Posso criar conteúdos sendo aluno?</p>
+                </button><!--perguntas-->
+                <div class="respostas resp1">
+                    <p>Não, somente professores podem criar ou editar conteúdos. No entanto, se desejar compartilhar conhecimentos mesmo sendo aluno, é possível passar por um teste para verificar sua aptidão.</p>
+                </div><!--respostas-->
+            </div><!--container-duvidas-->
+    
+            <div class="container-duvidas">
+                <button class="perguntas ap_perguntas2" onclick="aparecer_resposta2()">
+                    <p>Exemplo de pergunta?</p>
+                </button><!--perguntas-->
+                <button class="perguntas sa_perguntas2" onclick="sair_resposta2()">
+                    <p>Exemplo de pergunta?</p>
+                </button><!--perguntas-->
+                <div class="respostas resp2">
+                    <p>Exemplo de resposta.</p>
+                </div><!--respostas-->
+            </div><!--container-duvidas-->
+    
+            <div class="container-duvidas">
+                <button class="perguntas ap_perguntas3" onclick="aparecer_resposta3()">
+                    <p>Exemplo de pergunta?</p>
+                </button><!--perguntas-->
+                <button class="perguntas sa_perguntas3" onclick="sair_resposta3()">
+                    <p>Exemplo de pergunta?</p>
+                </button><!--perguntas-->
+                <div class="respostas resp3">
+                    <p>Exemplo de resposta.</p>
+                </div><!--respostas-->
+            </div><!--container-duvidas-->
+    
+        </div><!--background-duvidas-->
+    
+        <div class="background-redes">
+            <button class="voltar-redes" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+    
+            <div class="header-redes">REDES SOCIAIS</div>
+    
+            <div class="redes-primarias">
+                <a href="https://www.instagram.com" target="_blank"><button><img src="imagens/instagram.png" alt="">@ade_exemplo</button></a>
+    
+                <a href="https://whatsapp.com" target="_blank"><button><img src="imagens/whatsapp.png" alt="">@ade_exemplo</button></a>
+    
+                <a href="https://www.facebook.com" target="_blank"><button><img src="imagens/facebook.png" alt="">@ade_exemplo</button></a>
+    
+                <a href="https://twitter.com" target="_blank"><button><img src="imagens/twitter.png" alt="">@ade_exemplo</button></a>
+    
+            </div><!--redes-primarias-->
+            <div class="redes-secudarias">
+                <a href="https://br.pinterest.com" target="_blank"><button><img src="imagens/pinterest.png" alt="">@ade_exemplo</button></a>
+    
+                <a href="https://linkedin.com" target="_blank"><button><img src="imagens/linkedin.png" alt="">@ade_exemplo</button></a>
+    
+                <a href="https://snapchat.com" target="_blank"><button><img src="imagens/snapchat.png" alt="">@ade_exemplo</button></a>
+    
+                
+                <a href="https://www.youtube.com" target="_blank"><button><img src="imagens/youtube.png" alt="">@ade_exemplo</button></a>
+                
+            </div><!--redes-secudarias-->
+    
+        </div><!--background-redes-->
+        <script src="ade.js"></script>
+    
+</body>
+</html>
