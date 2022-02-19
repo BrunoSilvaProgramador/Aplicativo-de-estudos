@@ -24,21 +24,6 @@ var alert_atencao = document.querySelector('img.alert-atencao');
 var alert_verificado = document.querySelector('img.alert-verificado');
 var titulo_alert = document.querySelector('h2.titulo-alert');
 
-var ap_perguntas0 = document.querySelector('button.ap_perguntas0');
-var sa_perguntas0 = document.querySelector('button.sa_perguntas0');
-var respostas0 = document.querySelector('div.resp0');
-
-var ap_perguntas1 = document.querySelector('button.ap_perguntas1');
-var sa_perguntas1 = document.querySelector('button.sa_perguntas1');
-var respostas1 = document.querySelector('div.resp1');
-
-var ap_perguntas2 = document.querySelector('button.ap_perguntas2');
-var sa_perguntas2 = document.querySelector('button.sa_perguntas2');
-var respostas2 = document.querySelector('div.resp2');
-
-var ap_perguntas3 = document.querySelector('button.ap_perguntas3');
-var sa_perguntas3 = document.querySelector('button.sa_perguntas3');
-var respostas3 = document.querySelector('div.resp3');
 
 /* -----------------------------ARRAYS------------------------------- */
 
@@ -367,49 +352,35 @@ function redes(){
     background_redes.style.display = 'flex';
 }
 
-function aparecer_resposta0(){
-    ap_perguntas0.style.display = 'none';
-    sa_perguntas0.style.display = 'block';
-    respostas0.style.display = 'block';
-}
-function sair_resposta0(){
-    ap_perguntas0.style.display = 'block';
-    sa_perguntas0.style.display = 'none';
-    respostas0.style.display = 'none';
+let criar_pergunta = document.querySelector('.criar_pergunta')
+let cont_duvidas = document.querySelectorAll('.container-duvidas');
+let perguntas = document.querySelectorAll('.perguntas');
+let respostas = document.querySelectorAll('.respostas');
+let back_duvidas = document.querySelector('.background-duvidas')
+let texto = ['kljkfgnsio', 'fdiifgdjfgv'];
+let resp = ['kljgbfgbgfbfgnfgngjgdfb', 'fdngifnfngfrtfherfgergdjfgv'];
+
+function criar_perguntas(){
+
+    texto.push('textojvbdj')
+    resp.push('respostasjhfiosdjfiod')
+    prompt(cont_duvidas.length)
 }
 
-function aparecer_resposta1(){
-    ap_perguntas1.style.display = 'none';
-    sa_perguntas1.style.display = 'block';
-    respostas1.style.display = 'block';
-}
-function sair_resposta1(){
-    ap_perguntas1.style.display = 'block';
-    sa_perguntas1.style.display = 'none';
-    respostas1.style.display = 'none';
-}
-
-function aparecer_resposta2(){
-    ap_perguntas2.style.display = 'none';
-    sa_perguntas2.style.display = 'block';
-    respostas2.style.display = 'block';
-}
-function sair_resposta2(){
-    ap_perguntas2.style.display = 'block';
-    sa_perguntas2.style.display = 'none';
-    respostas2.style.display = 'none';
+for(let l = 0; l < cont_duvidas.length; l++){
+    perguntas[l].innerText = texto[l]
+    respostas[l].innerText = resp[l]
+    cont_duvidas[l].addEventListener('click', function(){
+        if(respostas[l].style.display == 'block'){
+            respostas[l].style.display = 'none';
+        }else{
+            respostas[l].style.display = 'block';
+        }
+    })
 }
 
-function aparecer_resposta3(){
-    ap_perguntas3.style.display = 'none';
-    sa_perguntas3.style.display = 'block';
-    respostas3.style.display = 'block';
-}
-function sair_resposta3(){
-    ap_perguntas3.style.display = 'block';
-    sa_perguntas3.style.display = 'none';
-    respostas3.style.display = 'none';
-}
+
+
 
 /* -------SEÇÃO HOME - PROFESSOR, ALUNO, DUVIDAS FREQUENTES OU REDES SOCIAIS--------- */
 

@@ -878,6 +878,7 @@ button.adicionar{
     box-shadow: 0 0 3px black;
     border-radius: 5px;
     margin-bottom: 20px;
+    cursor: pointer;
 }
 button.perguntas{
     width: 100%;
@@ -888,7 +889,6 @@ button.perguntas{
     border-radius: 5px;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.658);
 }
-
 .respostas{
     width: 100%;
     text-align: center;
@@ -896,10 +896,21 @@ button.perguntas{
     padding: 7px;
     display: none;
 }
-.sa_perguntas0, .sa_perguntas1, .sa_perguntas2, .sa_perguntas3{
-    display: none;
-
+.criar_pergunta{
+    width: 80px;
+    height: 80px;
+    font-size: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.445);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 4px 1px black;
+    position:absolute;
+    bottom: 80px;
+    right: 60px;
 }
+
 /* -----tela de duvidas------ */
 
 /* -----tela de redes------ */
@@ -1019,6 +1030,13 @@ button.voltar-redes{
     }
     button.voltar-materias{
         left: 15px;top: 80px;
+    }
+    .criar_pergunta{
+        width: 50px;
+        height: 50px;
+        position:absolute;
+        bottom: 60px;
+        right: 15px;
     }
 
 }
