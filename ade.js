@@ -358,24 +358,30 @@ function redes(){
 
 
 
-var texto = ['kljkfgnsio', 'fdiifgdjfgv', 'pergunta3'];
-var resp = ['kljgbfgbgfbfgnfgngjgdfb', 'fdngifnfngfrtfherfgergdjfgv', 'resposta3'];
+var texto = [];
+var resp = [];
 
 quant = [texto.length];
-load()
+for(let a = 0; a < quant[0]; a++){
+    document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
+}
+load1()
 
 function criar_perguntas(){
     texto.push(prompt('pergunta'));
     resp.push(prompt('resposta'));
     quant[0] = texto.length
     load()
+    load1()
 }
 
 function load(){
-    document.querySelector('div.back-duvidas').innerHTML = ''
-    for(let a = 0; a < quant[0]; a++){
+    for(let a = quant[0] - 1; a < quant[0]; a++){
         document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
     }
+}
+
+function load1(){
 
     let cont_duvidas = document.querySelectorAll('.container-duvidas');
     let perguntas = document.querySelectorAll('.perguntas');
@@ -392,7 +398,6 @@ function load(){
     }
 
 }
-
 
 
 
