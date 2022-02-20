@@ -352,31 +352,45 @@ function redes(){
     background_redes.style.display = 'flex';
 }
 
-let criar_pergunta = document.querySelector('.criar_pergunta')
-let cont_duvidas = document.querySelectorAll('.container-duvidas');
-let perguntas = document.querySelectorAll('.perguntas');
-let respostas = document.querySelectorAll('.respostas');
-let back_duvidas = document.querySelector('.background-duvidas')
-let texto = ['kljkfgnsio', 'fdiifgdjfgv'];
-let resp = ['kljgbfgbgfbfgnfgngjgdfb', 'fdngifnfngfrtfherfgergdjfgv'];
+
+
+
+
+
+
+var texto = ['kljkfgnsio', 'fdiifgdjfgv', 'pergunta3'];
+var resp = ['kljgbfgbgfbfgnfgngjgdfb', 'fdngifnfngfrtfherfgergdjfgv', 'resposta3'];
+
+quant = [texto.length];
+load()
 
 function criar_perguntas(){
-
-    texto.push('textojvbdj')
-    resp.push('respostasjhfiosdjfiod')
-    prompt(cont_duvidas.length)
+    texto.push(prompt('pergunta'));
+    resp.push(prompt('resposta'));
+    quant[0] = texto.length
+    load()
 }
 
-for(let l = 0; l < cont_duvidas.length; l++){
-    perguntas[l].innerText = texto[l]
-    respostas[l].innerText = resp[l]
-    cont_duvidas[l].addEventListener('click', function(){
-        if(respostas[l].style.display == 'block'){
-            respostas[l].style.display = 'none';
-        }else{
-            respostas[l].style.display = 'block';
-        }
-    })
+function load(){
+    document.querySelector('div.back-duvidas').innerHTML = ''
+    for(let a = 0; a < quant[0]; a++){
+        document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
+    }
+
+    let cont_duvidas = document.querySelectorAll('.container-duvidas');
+    let perguntas = document.querySelectorAll('.perguntas');
+    let respostas = document.querySelectorAll('.respostas');
+
+    for(let l = 0; l < cont_duvidas.length; l++){
+        cont_duvidas[l].addEventListener('click', function(){
+            if(respostas[l].style.display == 'block'){
+                respostas[l].style.display = 'none';
+            }else{
+                respostas[l].style.display = 'block';
+            }
+        })
+    }
+
 }
 
 
