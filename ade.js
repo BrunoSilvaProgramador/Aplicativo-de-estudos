@@ -346,6 +346,11 @@ function aluno(){
 function duvidas(){
     background.style.display = 'none';
     background_duvidas.style.display = 'block';
+    if(sit[0] == 'mestre'){
+        if(quant[1] > quant[0]){
+            document.querySelector('.responder_pergunta').style.display = 'block';
+        }
+    }
 }
 function redes(){
     background.style.display = 'none';
@@ -360,25 +365,84 @@ function redes(){
 
 var texto = [];
 var resp = [];
+var perguntas = [];
 
-quant = [texto.length];
+quant = [resp.length, 0];
+
 for(let a = 0; a < quant[0]; a++){
     document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
 }
 load1()
 
 function criar_perguntas(){
-    texto.push(prompt('pergunta'));
-    resp.push(prompt('resposta'));
-    quant[0] = texto.length
-    load()
-    load1()
+    document.querySelector('.back-alert-duvidas').style.display = 'flex';
+    document.querySelector('.alert-pergunta').style.display = 'inline-block';
+    document.querySelector('.alert-resposta').style.display = 'none';
 }
+function confirmar_alert_duvida(){
+    texto.push(document.querySelector('#pergunta_duvida').value);
+    if(document.querySelector('#pergunta_duvida').value.length <= 0){
+        document.querySelector('#pergunta_duvida').style.border = '2px solid red';
+    }else{
+        perguntas.push(texto[texto.length - 1])
+        quant[1] = texto.length;
+        if(sit[0] == 'mestre'){
+            if(quant[1] > quant[0]){
+                document.querySelector('.responder_pergunta').style.display = 'block';
+            }
+        }
+        document.querySelector('#pergunta_duvida').value = '';
+        document.querySelector('.back-alert-duvidas').style.display = 'none';
+        document.querySelector('#pergunta_duvida').style.border = '1px solid gray';
+    }
+}
+function cancelar_alert_duvida(){
+    document.querySelector('.back-alert-duvidas').style.display = 'none';
+    document.querySelector('#pergunta_duvida').value = '';
+    document.querySelector('#pergunta_duvida').style.border = '1px solid gray';
+    document.querySelector('#resposta_duvida').value = '';
+    document.querySelector('#resposta_duvida').style.border = '1px solid gray';
+    document.querySelector('.pergunta-de-duvida').style.display = 'none';
+}
+
+function confirmar_alert_duvida_resposta(){
+    if(document.querySelector('#resposta_duvida').value.length <= 0){
+        document.querySelector('#resposta_duvida').style.border = '2px solid red';
+    }else{
+        let i = quant[1] - quant[0]
+        resp.push(document.querySelector('#resposta_duvida').value);
+        perguntas.shift()
+        quant[0] = resp.length;
+        if(quant[1] <= quant[0]){
+            document.querySelector('.responder_pergunta').style.display = 'none';
+        }
+        load();
+        load1();
+        document.querySelector('#resposta_duvida').value = '';
+        document.querySelector('.back-alert-duvidas').style.display = 'none';
+        document.querySelector('#resposta_duvida').style.border = '1px solid gray';
+        document.querySelector('.pergunta-de-duvida').style.display = 'none';
+        document.querySelector('#resposta_duvida').style.display = 'none';
+        document.querySelector('#pergunta_duvida').style.display = 'block';
+    }
+}
+function responder_perguntas(){
+    document.querySelector('.back-alert-duvidas').style.display = 'flex';
+    document.querySelector('#resposta_duvida').style.display = 'block';
+    document.querySelector('#pergunta_duvida').style.display = 'none';
+    document.querySelector('.pergunta-de-duvida').style.display = 'block';
+    document.querySelector('.pergunta-de-duvida').innerText = perguntas[0];
+    document.querySelector('.alert-pergunta').style.display = 'none';
+    document.querySelector('.alert-resposta').style.display = 'inline-block';
+}
+
 
 function load(){
     for(let a = quant[0] - 1; a < quant[0]; a++){
         document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
     }
+
+    
 }
 
 function load1(){
@@ -418,6 +482,7 @@ function sair_perfil(){
     document.querySelector('div.login').style.display = 'flex';
     document.querySelector('div.opcoes-perfil').style.display = 'none';
     document.querySelector('div.perfil').style.display = 'none';
+    document.querySelector('.responder_pergunta').style.display = 'none';
 }
 
 function senha_perfil(){

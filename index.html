@@ -332,15 +332,35 @@
     
         <!-- -------------------tela de duvidas---------------------- -->
     
+        <div class="back-alert-duvidas">
+            <div class="alert-duvida">
+                <textarea  id="pergunta_duvida" cols="45" rows="7" style="resize: none; padding: 10px; border-radius: 5px; margin: 20px 0;" placeholder="Digite sua pergunta:"></textarea>
+                <p class="pergunta-de-duvida" style="display: none; word-wrap: break-word; width: 90%; text-align:center;margin: 10px auto"></p>
+                <textarea  id="resposta_duvida" cols="45" rows="7" style="resize: none; padding: 10px; border-radius: 5px; margin: 20px 0; display: none;" placeholder="Digite sua resposta:"></textarea>
+                
+                <div class="confirmar">
+                    <button class="confirmar-alert" onclick="cancelar_alert_duvida()">CANCELAR</button>
+                    <button class="confirmar-alert alert-pergunta" onclick="confirmar_alert_duvida()">CONFIRMAR</button>
+                    <button class="confirmar-alert alert-resposta" onclick="confirmar_alert_duvida_resposta()" style="display:none">CONFIRMAR</button>
+                </div><!--confirmar-->             
+            </div><!--alert-duvida-->
+        </div>
         <div class="background-duvidas">
             
             <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
     
             <header class="header-duvidas">DÚVIDAS FREQUENTES</header>
-            
-            <button class="criar_pergunta" onclick="criar_perguntas()"><p>+</p></button>
+            <div class="back-duvidas">
+                <div class="container-duvidas">
+                    <button class="perguntas">bdfuhsdiodfjisd?</button>
+                    <div class="respostas">hnciosndfv</div>
+                </div>
+            </div>
+            <div class="perguntas-button">
+                <button class="criar_pergunta" onclick="criar_perguntas()"><p>Perguntar !</p></button>
 
-            <div class="back-duvidas"></div>
+                <button class="responder_pergunta" onclick="responder_perguntas()"><p>Responder !</p></button>
+            </div>
 
         </div><!--background-duvidas-->
     

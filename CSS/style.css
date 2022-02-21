@@ -873,12 +873,12 @@ button.adicionar{
     margin-bottom: 30px;
 }
 .container-duvidas{
-    width: 100%;
+    width: 95%;
     background-color: red;
     box-shadow: 0 0 3px black;
     border-radius: 5px;
-    margin-bottom: 20px;
     cursor: pointer;
+    margin: 15px auto;
 }
 button.perguntas{
     width: 100%;
@@ -896,19 +896,69 @@ button.perguntas{
     padding: 7px;
     display: none;
 }
+.back-duvidas{
+    height: 75%;
+    width: 120%;
+    overflow-y: scroll;
+    position: relative;
+    left: -10%;
+}
+.perguntas-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+}
 .criar_pergunta{
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
-    border-radius: 50%;
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 10px;
     cursor: pointer;
     background-color: rgba(0, 0, 255, 0.445);
     color: white;
     border: 2px solid white;
     box-shadow: 0 0 4px 1px black;
-    position:absolute;
-    bottom: 80px;
-    right: 60px;
+    margin: 0 10px;
+    
+}
+.responder_pergunta{
+    padding: 3px 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: rgba(0, 0, 255, 0.445);
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 4px 1px black;
+    margin: 0 10px;
+    display: none;
+}
+
+.back-alert-duvidas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    display: none;
+}
+.alert-duvida{
+    width: 85%;
+    max-width : 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(116, 116, 116);
+    border-radius: 5px;
+    box-shadow: 0 0 5px black;
+    position: absolute;
+    padding: 10px;  
+    text-align: center;
+    z-index: 999;
 }
 
 /* -----tela de duvidas------ */
@@ -1031,13 +1081,6 @@ button.voltar-redes{
     }
     button.voltar-materias{
         left: 15px;top: 80px;
-    }
-    .criar_pergunta{
-        width: 50px;
-        height: 50px;
-        position:absolute;
-        bottom: 60px;
-        right: 15px;
     }
 
 }
