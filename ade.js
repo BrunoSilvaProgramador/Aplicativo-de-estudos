@@ -23,7 +23,8 @@ var confirmar_nova_senha = document.querySelector('input#confirmar-nova-senha');
 var alert_atencao = document.querySelector('img.alert-atencao');
 var alert_verificado = document.querySelector('img.alert-verificado');
 var titulo_alert = document.querySelector('h2.titulo-alert');
-
+var background_conteudo_materias = document.querySelector('div.background-conteudo-materias');
+var tela_conteudo = document.querySelector('div.tela-conteudo');
 
 /* -----------------------------ARRAYS------------------------------- */
 
@@ -317,7 +318,7 @@ function professor(){
         if(sit[0] == 'professor' || sit[0]  == 'mestre'){
             document.querySelector('div.background-materia').style.display = 'block';
             background.style.display = 'none';
-            document.querySelector('header.header-materias h2').innerText = 'Escolha a matéria para adicionar conteúdo';
+            document.querySelector('.header-materias h2').innerText = 'Escolha a matéria para adicionar conteúdo';
             document.querySelector('button.criars').style.display = 'block';
             sit[1] = 1;
         }else{
@@ -334,7 +335,7 @@ function aluno(){
     if(login[0] == 'logado'){
         document.querySelector('div.background-materia').style.display = 'block';
         background.style.display = 'none';
-        document.querySelector('header.header-materias h2').innerText = 'Matérias';
+        document.querySelector('.header-materias h2').innerText = 'Matérias';
         document.querySelector('button.criars').style.display = 'none';
         sit[1] = 0;
     }else{
@@ -602,7 +603,9 @@ function confirmar_alterar(){
 
 let cont_materia = document.querySelectorAll('.container-materia');
 var tituloMateria = '';
-
+var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
+var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
+var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
 
 
 
@@ -636,140 +639,280 @@ for(let l = 0; l < cont_materia.length; l++){
                 tituloMateria = 'PORTUGUÊS'; 
                 materias[0] = 1;
                 for(let i=0; i < matPor.length; i++){
-                    matPor[i].style.display = 'inline-block'
+                    matPor[i].style.display = 'inline-block';
+                    matPor[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosp[i];
+                        sinopse_tela.innerText = sinopsesp[i];
+                        conteudo_tela.innerText = contp[i];
+                    })
                 }
                 break;
             case 1: 
                 tituloMateria = 'MATEMÁTICA'; 
                 materias[0] =2; 
                 for(let i=0; i < matMat.length; i++){
-                    matMat[i].style.display = 'inline-block'
+                    matMat[i].style.display = 'inline-block';
+                    matMat[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosm[i];
+                        sinopse_tela.innerText = sinopsesm[i];
+                        conteudo_tela.innerText = contm[i];
+                    })
                 }
                 break;
             case 2: 
                 tituloMateria = 'BIOLOGIA';
                 materias[0] =3;
                 for(let i=0; i < matBio.length; i++){
-                    matBio[i].style.display = 'inline-block'
+                    matBio[i].style.display = 'inline-block';
+                    matBio[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosb[i];
+                        sinopse_tela.innerText = sinopsesb[i];
+                        conteudo_tela.innerText = contb[i];
+                    })
                 }
                 break;
             case 3: 
                 tituloMateria = 'FÍSICA'; 
                 materias[0] =4; 
                 for(let i=0; i < matFis.length; i++){
-                    matFis[i].style.display = 'inline-block'
+                    matFis[i].style.display = 'inline-block';
+                    matFis[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosf[i];
+                        sinopse_tela.innerText = sinopsesf[i];
+                        conteudo_tela.innerText = contf[i];
+                    })
                 }
                 break;
             case 4: 
                 tituloMateria = 'QUÍMICA'; 
                 materias[0] =5; 
                 for(let i=0; i < matQui.length; i++){
-                    matQui[i].style.display = 'inline-block'
+                    matQui[i].style.display = 'inline-block';
+                    matQui[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosq[i];
+                        sinopse_tela.innerText = sinopsesq[i];
+                        conteudo_tela.innerText = contq[i];
+                    })
                 }
                 break;
             case 5: 
                 tituloMateria = 'FILOSOFIA'; 
                 materias[0] =6; 
                 for(let i=0; i < matFilo.length; i++){
-                    matFilo[i].style.display = 'inline-block'
+                    matFilo[i].style.display = 'inline-block';
+                    matFilo[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosfilo[i];
+                        sinopse_tela.innerText = sinopsesfilo[i];
+                        conteudo_tela.innerText = contfilo[i];
+                    })
                 }
                 break;
             case 6: 
                 tituloMateria = 'INGLÊS'; 
                 materias[0] =7; 
                 for(let i=0; i < matIng.length; i++){
-                    matIng[i].style.display = 'inline-block'
+                    matIng[i].style.display = 'inline-block';
+                    matIng[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosi[i];
+                        sinopse_tela.innerText = sinopsesi[i];
+                        conteudo_tela.innerText = conti[i];
+                    })
                 }
                 break;
             case 7: 
                 tituloMateria = 'ESPANHOL'; 
                 materias[0] =8;
                 for(let i=0; i < matEsp.length; i++){
-                    matEsp[i].style.display = 'inline-block'
+                    matEsp[i].style.display = 'inline-block';
+                    matEsp[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulose[i];
+                        sinopse_tela.innerText = sinopsese[i];
+                        conteudo_tela.innerText = conte[i];
+                    })
                 } 
                 break;
             case 8: 
                 tituloMateria = 'GEOGRAFIA'; 
                 materias[0] =9; 
                 for(let i=0; i < matGeo.length; i++){
-                    matGeo[i].style.display = 'inline-block'
+                    matGeo[i].style.display = 'inline-block';
+                    matGeo[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosg[i];
+                        sinopse_tela.innerText = sinopsesg[i];
+                        conteudo_tela.innerText = contg[i];
+                    })
                 }
                 break;
             case 9: 
                 tituloMateria = 'HISTÓRIA'; 
                 materias[0] =10; 
                 for(let i=0; i < matHis.length; i++){
-                    matHis[i].style.display = 'inline-block'
+                    matHis[i].style.display = 'inline-block';
+                    matHis[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosh[i];
+                        sinopse_tela.innerText = sinopsesh[i];
+                        conteudo_tela.innerText = conth[i];
+                    })
                 }
                 break;
             case 10: 
                 tituloMateria = 'SOCIOLOGIA'; 
                 materias[0] =11; 
                 for(let i=0; i < matSoc.length; i++){
-                    matSoc[i].style.display = 'inline-block'
+                    matSoc[i].style.display = 'inline-block';
+                    matSoc[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = tituloss[i];
+                        sinopse_tela.innerText = sinopsess[i];
+                        conteudo_tela.innerText = conts[i];
+                    })
                 }
                 break;
             case 11: 
                 tituloMateria = 'ED. FÍSICA'; 
                 materias[0] =12;
                 for(let i=0; i < matEdFis.length; i++){
-                    matEdFis[i].style.display = 'inline-block'
+                    matEdFis[i].style.display = 'inline-block';
+                    matEdFis[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosed[i];
+                        sinopse_tela.innerText = sinopsesed[i];
+                        conteudo_tela.innerText = conted[i];
+                    })
                 }
                 break;
             case 12: 
                 tituloMateria = 'ARTES'; 
                 materias[0] =13; 
                 for(let i=0; i < matArt.length; i++){
-                    matArt[i].style.display = 'inline-block'
+                    matArt[i].style.display = 'inline-block';
+                    matArt[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosa[i];
+                        sinopse_tela.innerText = sinopsesa[i];
+                        conteudo_tela.innerText = conta[i];
+                    })
                 }
                 break;
             case 13: 
                 tituloMateria = 'LITERATURA'; 
                 materias[0] =14; 
                 for(let i=0; i < matLit.length; i++){
-                    matLit[i].style.display = 'inline-block'
+                    matLit[i].style.display = 'inline-block';
+                    matLit[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosl[i];
+                        sinopse_tela.innerText = sinopsesl[i];
+                        conteudo_tela.innerText = contl[i];
+                    })
                 }
                 break;
             case 14: 
                 tituloMateria = 'PROGRAMAÇÃO'; 
                 materias[0] =15; 
                 for(let i=0; i < matPro.length; i++){
-                    matPro[i].style.display = 'inline-block'
+                    matPro[i].style.display = 'inline-block';
+                    matPro[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosprog[i];
+                        sinopse_tela.innerText = sinopsesprog[i];
+                        conteudo_tela.innerText = contprog[i];
+                    })
                 }
                 break;
             case 15: 
                 tituloMateria = 'PHOTOSHOP'; 
                 materias[0] =16; 
                 for(let i=0; i < matPho.length; i++){
-                    matPho[i].style.display = 'inline-block'
+                    matPho[i].style.display = 'inline-block';
+                    matPho[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosph[i];
+                        sinopse_tela.innerText = sinopsesph[i];
+                        conteudo_tela.innerText = contph[i];
+                    })
                 }
                 break;
             case 16: 
                 tituloMateria = 'MEIO AMBIENTE'; 
                 materias[0] =17;
                 for(let i=0; i < matMei.length; i++){
-                    matMei[i].style.display = 'inline-block'
+                    matMei[i].style.display = 'inline-block';
+                    matMei[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosma[i];
+                        sinopse_tela.innerText = sinopsesma[i];
+                        conteudo_tela.innerText = contma[i];
+                    })
                 } 
                 break;
             case 17: 
                 tituloMateria = 'ED. FINANCEIRA'; 
                 materias[0] =18; 
                 for(let i=0; i < matEdFin.length; i++){
-                    matEdFin[i].style.display = 'inline-block'
+                    matEdFin[i].style.display = 'inline-block';
+                    matEdFin[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosedf[i];
+                        sinopse_tela.innerText = sinopsesedf[i];
+                        conteudo_tela.innerText = contedf[i];
+                    })
                 }
                 break;
             case 18: 
                 tituloMateria = 'REDAÇÃO'; 
                 materias[0] =19; 
                 for(let i=0; i < matRed.length; i++){
-                    matRed[i].style.display = 'inline-block'
+                    matRed[i].style.display = 'inline-block';
+                    matRed[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosr[i];
+                        sinopse_tela.innerText = sinopsesr[i];
+                        conteudo_tela.innerText = contr[i];
+                    })
                 }
                 break;
             case 19: 
                 tituloMateria = 'ENEM'; 
                 materias[0] =20; 
                 for(let i=0; i < matEne.length; i++){
-                    matEne[i].style.display = 'inline-block'
+                    matEne[i].style.display = 'inline-block';
+                    matEne[i].addEventListener('click', function(){
+                        background_conteudo_materias.style.display = 'none';
+                        tela_conteudo.style.display = 'block';
+                        titulo_tela.innerText = titulosenem[i];
+                        sinopse_tela.innerText = sinopsesenem[i];
+                        conteudo_tela.innerText = contenem[i];
+                        })
                 }
                 break; 
         }
@@ -800,12 +943,12 @@ function voltar_conteudo(){
     document.querySelector('div.background-conteudo-materias').style.display = 'flex';
     document.querySelector('button.criars').style.display = 'block';
 
-    // if(sit[1] == 1){
-    //     document.querySelector('button.criars').style.display = 'block';
+    if(sit[1] == 1){
+        document.querySelector('button.criars').style.display = 'block';
         
-    // }else{
-    //     document.querySelector('button.criars').style.display = 'none';
-    // }
+    }else{
+        document.querySelector('button.criars').style.display = 'none';
+    }
 }
 function adicionar(){
     let titulo = document.querySelector('input#titulo');
@@ -963,102 +1106,242 @@ function adicionar(){
     switch (materias[0]){
         case 1: 
             for(let i=0; i < matPor.length; i++){
-                matPor[i].style.display = 'inline-block'
+                matPor[i].style.display = 'inline-block';
+                matPor[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosp[i];
+                    sinopse_tela.innerText = sinopsesp[i];
+                    conteudo_tela.innerText = contp[i];
+                })
             }
             break;
         case 2: 
             for(let i=0; i < matMat.length; i++){
-                matMat[i].style.display = 'inline-block'
+                matMat[i].style.display = 'inline-block';
+                matMat[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosm[i];
+                    sinopse_tela.innerText = sinopsesm[i];
+                    conteudo_tela.innerText = contm[i];
+                })
             }
             break;
         case 3: 
             for(let i=0; i < matBio.length; i++){
-                matBio[i].style.display = 'inline-block'
+                matBio[i].style.display = 'inline-block';
+                matBio[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosb[i];
+                    sinopse_tela.innerText = sinopsesb[i];
+                    conteudo_tela.innerText = contb[i];
+                })
             }
             break;
         case 4: 
             for(let i=0; i < matFis.length; i++){
-                matFis[i].style.display = 'inline-block'
+                matFis[i].style.display = 'inline-block';
+                matFis[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosf[i];
+                    sinopse_tela.innerText = sinopsesf[i];
+                    conteudo_tela.innerText = contf[i];
+                })
             }
             break;
         case 5: 
             for(let i=0; i < matQui.length; i++){
-                matQui[i].style.display = 'inline-block'
+                matQui[i].style.display = 'inline-block';
+                matQui[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosq[i];
+                    sinopse_tela.innerText = sinopsesq[i];
+                    conteudo_tela.innerText = contq[i];
+                })
             }
             break;
         case 6: 
             for(let i=0; i < matFilo.length; i++){
-                matFilo[i].style.display = 'inline-block'
+                matFilo[i].style.display = 'inline-block';
+                matFilo[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosfilo[i];
+                    sinopse_tela.innerText = sinopsesfilo[i];
+                    conteudo_tela.innerText = contfilo[i];
+                })
             }
             break;
         case 7: 
             for(let i=0; i < matIng.length; i++){
-                matIng[i].style.display = 'inline-block'
+                matIng[i].style.display = 'inline-block';
+                matIng[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosi[i];
+                    sinopse_tela.innerText = sinopsesi[i];
+                    conteudo_tela.innerText = conti[i];
+                })
             }
             break;
         case 8: 
             for(let i=0; i < matEsp.length; i++){
-                matEsp[i].style.display = 'inline-block'
+                matEsp[i].style.display = 'inline-block';
+                matEsp[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulose[i];
+                    sinopse_tela.innerText = sinopsese[i];
+                    conteudo_tela.innerText = conte[i];
+                })
             } 
             break;
         case 9: 
             for(let i=0; i < matGeo.length; i++){
-                matGeo[i].style.display = 'inline-block'
+                matGeo[i].style.display = 'inline-block';
+                matGeo[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosg[i];
+                    sinopse_tela.innerText = sinopsesg[i];
+                    conteudo_tela.innerText = contg[i];
+                })
             }
             break;
         case 10: 
             for(let i=0; i < matHis.length; i++){
-                matHis[i].style.display = 'inline-block'
+                matHis[i].style.display = 'inline-block';
+                matHis[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosh[i];
+                    sinopse_tela.innerText = sinopsesh[i];
+                    conteudo_tela.innerText = conth[i];
+                })
             }
             break;
         case 11: 
             for(let i=0; i < matSoc.length; i++){
-                matSoc[i].style.display = 'inline-block'
+                matSoc[i].style.display = 'inline-block';
+                matSoc[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = tituloss[i];
+                    sinopse_tela.innerText = sinopsess[i];
+                    conteudo_tela.innerText = conts[i];
+                })
             }
             break;
         case 12: 
             for(let i=0; i < matEdFis.length; i++){
-                matEdFis[i].style.display = 'inline-block'
+                matEdFis[i].style.display = 'inline-block';
+                matEdFis[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosed[i];
+                    sinopse_tela.innerText = sinopsesed[i];
+                    conteudo_tela.innerText = conted[i];
+                })
             }
             break;
         case 13: 
             for(let i=0; i < matArt.length; i++){
-                matArt[i].style.display = 'inline-block'
+                matArt[i].style.display = 'inline-block';
+                matArt[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosa[i];
+                    sinopse_tela.innerText = sinopsesa[i];
+                    conteudo_tela.innerText = conta[i];
+                })
             }
             break;
         case 14: 
             for(let i=0; i < matLit.length; i++){
-                matLit[i].style.display = 'inline-block'
+                matLit[i].style.display = 'inline-block';
+                matLit[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosl[i];
+                    sinopse_tela.innerText = sinopsesl[i];
+                    conteudo_tela.innerText = contl[i];
+                })
             }
             break;
         case 15: 
             for(let i=0; i < matPro.length; i++){
-                matPro[i].style.display = 'inline-block'
+                matPro[i].style.display = 'inline-block';
+                matPro[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosprog[i];
+                    sinopse_tela.innerText = sinopsesprog[i];
+                    conteudo_tela.innerText = contprog[i];
+                })
             }
             break;
         case 16: 
             for(let i=0; i < matPho.length; i++){
-                matPho[i].style.display = 'inline-block'
+                matPho[i].style.display = 'inline-block';
+                matPho[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosph[i];
+                    sinopse_tela.innerText = sinopsesph[i];
+                    conteudo_tela.innerText = contph[i];
+                })
             }
             break;
         case 17: 
             for(let i=0; i < matMei.length; i++){
-                matMei[i].style.display = 'inline-block'
+                matMei[i].style.display = 'inline-block';
+                matMei[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosma[i];
+                    sinopse_tela.innerText = sinopsesma[i];
+                    conteudo_tela.innerText = contma[i];
+                })
             } 
             break;
         case 18: 
             for(let i=0; i < matEdFin.length; i++){
-                matEdFin[i].style.display = 'inline-block'
+                matEdFin[i].style.display = 'inline-block';
+                matEdFin[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosedf[i];
+                    sinopse_tela.innerText = sinopsesedf[i];
+                    conteudo_tela.innerText = contedf[i];
+                })
             }
             break;
         case 19: 
             for(let i=0; i < matRed.length; i++){
-                matRed[i].style.display = 'inline-block'
+                matRed[i].style.display = 'inline-block';
+                matRed[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosr[i];
+                    sinopse_tela.innerText = sinopsesr[i];
+                    conteudo_tela.innerText = contr[i];
+                })
             }
             break;
         case 20: 
             for(let i=0; i < matEne.length; i++){
-                matEne[i].style.display = 'inline-block'
+                matEne[i].style.display = 'inline-block';
+                matEne[i].addEventListener('click', function(){
+                    background_conteudo_materias.style.display = 'none';
+                    tela_conteudo.style.display = 'block';
+                    titulo_tela.innerText = titulosenem[i];
+                    sinopse_tela.innerText = sinopsesenem[i];
+                    conteudo_tela.innerText = contenem[i];
+                })
             }
             break;  
          
@@ -1069,1306 +1352,4 @@ function adicionar(){
     cont.value = '';
 }
 
-
-
-
-
-
-
-function clicar_conteudo1(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 0
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-       
-}
-function clicar_conteudo2(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 1
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo3(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 2
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo4(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 3
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo5(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 4
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo6(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 5
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo7(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 6
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo8(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 7
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo9(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 8
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-
-function clicar_conteudo10(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 9
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo11(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 10
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo12(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 11
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo13(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 12
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo14(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 13
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo15(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 14
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo16(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 15
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo17(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 16
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo18(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 17
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo19(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 18
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo20(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 19
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo21(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 20
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo22(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 21
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo23(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 22
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo24(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 23
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo25(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 24
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo26(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 25
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo27(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 26
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
-function clicar_conteudo28(){
-    var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
-    var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
-    var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-    var c = 27
-    if(materias[0] == 1){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosp[c];sinopse_tela.innerText = sinopsesp[c];conteudo_tela.innerText = contp[c];
-    }
-    if(materias[0] == 2){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosm[c];sinopse_tela.innerText = sinopsesm[c];conteudo_tela.innerText = contm[c];
-    } 
-    if(materias[0] == 3){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosb[c];sinopse_tela.innerText = sinopsesb[c];conteudo_tela.innerText = contb[c];
-    } 
-    if(materias[0] == 4){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosf[c];sinopse_tela.innerText = sinopsesf[c];conteudo_tela.innerText = contf[c];
-    } 
-    if(materias[0] == 5){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosq[c];sinopse_tela.innerText = sinopsesq[c];conteudo_tela.innerText = contq[c];
-    } 
-    if(materias[0] == 6){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosfilo[c];sinopse_tela.innerText = sinopsesfilo[c];conteudo_tela.innerText = contfilo[c];
-    } 
-    if(materias[0] == 7){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosi[c];sinopse_tela.innerText = sinopsesi[c];conteudo_tela.innerText = conti[c];
-    } 
-    if(materias[0] == 8){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulose[c];sinopse_tela.innerText = sinopsese[c];conteudo_tela.innerText = conte[c];
-    } 
-    if(materias[0] == 9){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosg[c];sinopse_tela.innerText = sinopsesg[c];conteudo_tela.innerText = contg[c];
-    } 
-    if(materias[0] == 10){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosh[c];sinopse_tela.innerText = sinopsesh[c];conteudo_tela.innerText = conth[c];
-    } 
-    if(materias[0] == 11){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = tituloss[c];sinopse_tela.innerText = sinopsess[c];conteudo_tela.innerText = conts[c];
-    } 
-    if(materias[0] == 12){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosed[c];sinopse_tela.innerText = sinopsesed[c];conteudo_tela.innerText = conted[c];
-    } 
-    if(materias[0] == 13){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosa[c];sinopse_tela.innerText = sinopsesa[c];conteudo_tela.innerText = conta[c];
-    } 
-    if(materias[0] == 14){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosl[c];sinopse_tela.innerText = sinopsesl[c];conteudo_tela.innerText = contl[c];
-    } 
-    if(materias[0] == 15){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosprog[c];sinopse_tela.innerText = sinopsesprog[c];conteudo_tela.innerText = contprog[c];
-    } 
-    if(materias[0] == 16){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosph[c];sinopse_tela.innerText = sinopsesph[c];conteudo_tela.innerText = contph[c];
-    } 
-    if(materias[0] == 17){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosma[c];sinopse_tela.innerText = sinopsesma[c];conteudo_tela.innerText = contma[c];
-    } 
-    if(materias[0] == 18){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosedf[c];sinopse_tela.innerText = sinopsesedf[c];conteudo_tela.innerText = contedf[c];
-    } 
-    if(materias[0] == 19){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosr[c];sinopse_tela.innerText = sinopsesr[c];conteudo_tela.innerText = contr[c];
-    } 
-    if(materias[0] == 20){document.querySelector('div.background-conteudo-materias').style.display = 'none';document.querySelector('div.tela-conteudo').style.display = 'block';titulo_tela.innerText = titulosenem[c];sinopse_tela.innerText = sinopsesenem[c];conteudo_tela.innerText = contenem[c];
-    }  
-}
 

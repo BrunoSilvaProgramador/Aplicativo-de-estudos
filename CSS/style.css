@@ -773,6 +773,7 @@ button.criar{
     position:absolute;
     bottom: 80px;
     right: 60px;
+    display: none;
 }
 button.criar p{
     position: relative;
