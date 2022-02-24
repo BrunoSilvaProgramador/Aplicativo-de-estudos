@@ -80,7 +80,7 @@ button.confirmar-alert{
     height: 100%;
     background-color: #99c8f2;
     word-wrap: break-word;
-    /* display: none; */
+    display: none;
 }
 .header-home{
     width: 100%;
@@ -581,7 +581,7 @@ input#enviar-cadastro{
     height: 100%;
     background-color: #99c8f2;
     word-wrap: break-word;
-    display: none;
+    /* display: none; */
     
 }
 .voltar-materias img{
@@ -701,15 +701,13 @@ h2.titulo-background-conteudo-materias{
 }
 .background-conteudo-materia{
     width: 80%;
-    height: 100%;
-    background-color: #99c8f2;
+    height: 80%;
+    background-color: transparent;
     word-wrap: break-word;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     overflow-y:scroll;   
-    display: none;
-
 }
 
 
@@ -721,7 +719,11 @@ button.container-conteudo-materia{
     cursor: pointer;
     margin: 10px;
     box-shadow: -2px 2px 0 3px black;
+    display: none;
     
+}
+.visivel{
+    display: inline-block !important;
 }
 .imagem-conteudo{
     width: 100%;

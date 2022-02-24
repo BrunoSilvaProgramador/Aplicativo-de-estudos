@@ -599,172 +599,47 @@ function confirmar_alterar(){
 
 //-----------------------------materias-------------------------------------
 
-function portugues(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.materia_portugues').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'PORTUGUÊS';
-    materias[0] = 1
-}
-function matematica(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_matematica').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'MATEMÁTICA';
-    materias[0] = 2
-}
-function biologia(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_biologia').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'BIOLOGIA';
-    materias[0] = 3
-}
-function fisica(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_fisica').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'FÍSICA';
-    materias[0] = 4
-}
-function quimica(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_quimica').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'QUÍMICA';
-    materias[0] = 5
-}
-function filosofia(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_filosofia').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'FILOSOFIA';
-    materias[0] = 6
-}
-function ingles(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_ingles').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'INGLÊS';
-    materias[0] = 7
-}
-function espanhol(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_espanhol').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'ESPANHOL';
-    materias[0] = 8
-}
-function geografia(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_geografia').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'GEOGRAFIA';
-    materias[0] = 9
-}
-function historia(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_historia').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'HISTÓRIA';
-    materias[0] = 10
-}
-function sociologia(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_sociologia').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'SOCIOLOGIA';
-    materias[0] = 11
-}
-function ed_fisica(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_ed_fisica').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'EDUCAÇÃO FÍSICA';
-    materias[0] = 12
-}
-function artes(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_artes').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'ARTES';
-    materias[0] = 13
-}
-function literatura(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_literatura').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'LITERATURA';
-    materias[0] = 14
-}
-function programacao(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_programacao').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'PROGRAMAÇÃO';
-    materias[0] = 15
-}
-function photoshop(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_photoshop').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'PHOTOSHOP';
-    materias[0] = 16
-}
-function meio_ambiente(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_meio_ambiente').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'MEIO AMBIENTE';
-    materias[0] = 17
-}
-function ed_financeira(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_ed_financeira').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'EDUCAÇÃO FINANCEIRA';
-    materias[0] = 18
-}
-function redacao(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_redacao').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'REDAÇÃO';
-    materias[0] = 19
-}
-function enem(){
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('div.background-materia').style.display = 'none';
-    document.querySelector('div.materia_enem').style.display = 'flex';
-    document.querySelector('h2.titulo-background-conteudo-materias').innerText = 'ENEM';
-    materias[0] = 20
-}
 
+let cont_materia = document.querySelectorAll('.container-materia');
+var tituloMateria = '';
+
+
+
+
+    for(let l = 0; l < cont_materia.length; l++){
+        cont_materia[l].addEventListener('click', function(){
+            document.querySelector('div.background-conteudo-materias').style.display = 'flex';
+            document.querySelector('div.background-materia').style.display = 'none';
+
+            switch (l){
+                case 0: tituloMateria = 'PORTUGUÊS'; materias[0] = 1; break;
+                case 1: tituloMateria = 'MATEMÁTICA'; materias[0] =2; break;
+                case 2: tituloMateria = 'BIOLOGIA'; materias[0] =3; break;
+                case 3: tituloMateria = 'FÍSICA'; materias[0] =4; break;
+                case 4: tituloMateria = 'QUÍMICA'; materias[0] =5; break;
+                case 5: tituloMateria = 'FILOSOFIA'; materias[0] =6; break;
+                case 6: tituloMateria = 'INGLÊS'; materias[0] =7; break;
+                case 7: tituloMateria = 'ESPANHOL'; materias[0] =8; break;
+                case 8: tituloMateria = 'GEOGRAFIA'; materias[0] =9; break;
+                case 9: tituloMateria = 'HISTÓRIA'; materias[0] =10; break;
+                case 10: tituloMateria = 'SOCIOLOGIA'; materias[0] =11; break;
+                case 11: tituloMateria = 'ED. FÍSICA'; materias[0] =12; break;
+                case 12: tituloMateria = 'ARTES'; materias[0] =13; break;
+                case 13: tituloMateria = 'LITERATURA'; materias[0] =14; break;
+                case 14: tituloMateria = 'PROGRAMAÇÃO'; materias[0] =15; break;
+                case 15: tituloMateria = 'PHOTOSHOP'; materias[0] =16; break;
+                case 16: tituloMateria = 'MEIO AMBIENTE'; materias[0] =17; break;
+                case 17: tituloMateria = 'ED. FINANCEIRA'; materias[0] =18; break;
+                case 18: tituloMateria = 'REDAÇÃO'; materias[0] =19; break;
+                case 19: tituloMateria = 'ENEM'; materias[0] =20; break; 
+            }
+            document.querySelector('h2.titulo-background-conteudo-materias').innerText = tituloMateria;
+        })
+    }
 
 function voltar_materias(){
     document.querySelector('div.background-materia').style.display = 'block';
     document.querySelector('div.background-conteudo-materias').style.display = 'none';
-    document.querySelector('div.materia_matematica').style.display = 'none'; 
-    document.querySelector('div.materia_portugues').style.display = 'none';
-    document.querySelector('div.materia_biologia').style.display = 'none';
-    document.querySelector('div.materia_fisica').style.display = 'none';
-    document.querySelector('div.materia_quimica').style.display = 'none';
-    document.querySelector('div.materia_filosofia').style.display = 'none';
-    document.querySelector('div.materia_ingles').style.display = 'none';
-    document.querySelector('div.materia_espanhol').style.display = 'none';
-    document.querySelector('div.materia_geografia').style.display = 'none';
-    document.querySelector('div.materia_historia').style.display = 'none';
-    document.querySelector('div.materia_sociologia').style.display = 'none';
-    document.querySelector('div.materia_ed_fisica').style.display = 'none';
-    document.querySelector('div.materia_artes').style.display = 'none';
-    document.querySelector('div.materia_literatura').style.display = 'none';
-    document.querySelector('div.materia_programacao').style.display = 'none';
-    document.querySelector('div.materia_photoshop').style.display = 'none';
-    document.querySelector('div.materia_meio_ambiente').style.display = 'none';
-    document.querySelector('div.materia_ed_financeira').style.display = 'none';
-    document.querySelector('div.materia_redacao').style.display = 'none';
-    document.querySelector('div.materia_enem').style.display = 'none';
-
     materias[0] = 0
 }
 
@@ -774,164 +649,218 @@ function criar(){
     document.querySelector('div.adicionar-conteudo').style.display = 'flex';
     document.querySelector('button.criars').style.display = 'none';
 }
+
 function voltar_conteudo(){
     document.querySelector('div.adicionar-conteudo').style.display = 'none';
     document.querySelector('div.tela-conteudo').style.display = 'none';
     document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    if(sit[1] == 1){
-        document.querySelector('button.criars').style.display = 'block';
+    document.querySelector('button.criars').style.display = 'block';
+
+    // if(sit[1] == 1){
+    //     document.querySelector('button.criars').style.display = 'block';
         
-    }else{
-        document.querySelector('button.criars').style.display = 'none';
-    }
+    // }else{
+    //     document.querySelector('button.criars').style.display = 'none';
+    // }
 }
-
-
-var j = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 function adicionar(){
     let titulo = document.querySelector('input#titulo');
     let sinopse = document.querySelector('input#sinopse');
     let cont = document.querySelector('textarea#cont');
-    if(materias[0] == 1){
-        j[0]++
-        document.querySelector(`div.materia_portugues`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[0]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[0]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosp.push(titulo.value);  
-        sinopsesp.push(sinopse.value);
-        contp.push(cont.value);
+    let matSelec = '';
+
+    switch (materias[0]){
+        case 1: 
+            titulosp.push(titulo.value);  
+            sinopsesp.push(sinopse.value);
+            contp.push(cont.value);
+            matSelec = 'materia_portugues';
+            break;
+        case 2: 
+            titulosm.push(titulo.value);  
+            sinopsesm.push(sinopse.value);
+            contm.push(cont.value);
+            matSelec = 'materia_matematica';
+            break;
+        case 3: 
+            titulosb.push(titulo.value);  
+            sinopsesb.push(sinopse.value);
+            contb.push(cont.value);
+            matSelec = 'materia_biologia';
+            break;
+        case 4: 
+            titulosf.push(titulo.value);  
+            sinopsesf.push(sinopse.value);
+            contf.push(cont.value);
+            matSelec = 'materia_fisica';
+            break;
+        case 5: 
+            titulosq.push(titulo.value);  
+            sinopsesq.push(sinopse.value);
+            contq.push(cont.value);
+            matSelec = 'materia_quimica';
+            break;
+        case 6: 
+            titulosfilo.push(titulo.value);  
+            sinopsesfilo.push(sinopse.value);
+            contfilo.push(cont.value);
+            matSelec = 'materia_filosofia';
+            break;
+        case 7: 
+            titulosi.push(titulo.value);  
+            sinopsesi.push(sinopse.value);
+            conti.push(cont.value);
+            matSelec = 'materia_ingles';
+            break;
+        case 8: 
+            titulose.push(titulo.value);  
+            sinopsese.push(sinopse.value);
+            conte.push(cont.value);
+            matSelec = 'materia_espanhol';
+            break;
+        case 9: 
+            titulosg.push(titulo.value);  
+            sinopsesg.push(sinopse.value);
+            contg.push(cont.value);
+            matSelec = 'materia_geografia';
+            break;
+        case 10: 
+            titulosh.push(titulo.value);  
+            sinopsesh.push(sinopse.value);
+            conth.push(cont.value);
+            matSelec = 'materia_historia';
+            break;
+        case 11: 
+            tituloss.push(titulo.value);  
+            sinopsess.push(sinopse.value);
+            conts.push(cont.value);
+            matSelec = 'materia_sociologia';
+            break;
+        case 12: 
+            titulosed.push(titulo.value);  
+            sinopsesed.push(sinopse.value);
+            conted.push(cont.value);
+            matSelec = 'materia_edFisica';
+            break;
+        case 13: 
+            titulosa.push(titulo.value);  
+            sinopsesa.push(sinopse.value);
+            conta.push(cont.value);
+            matSelec = 'materia_artes';
+            break;
+        case 14: 
+            titulosl.push(titulo.value);  
+            sinopsesl.push(sinopse.value);
+            contl.push(cont.value);
+            matSelec = 'materia_literatura';
+            break;
+        case 15: 
+            titulosprog.push(titulo.value);  
+            sinopsesprog.push(sinopse.value);
+            contprog.push(cont.value);
+            matSelec = 'materia_programacao';
+            break;
+        case 16: 
+            titulosph.push(titulo.value);  
+            sinopsesph.push(sinopse.value);
+            contph.push(cont.value);
+            matSelec = 'materia_photoshop';
+            break;
+        case 17: 
+            titulosma.push(titulo.value);  
+            sinopsesma.push(sinopse.value);
+            contma.push(cont.value);
+            matSelec = 'materia_meioAmbiente';
+            break;
+        case 18: 
+            titulosedf.push(titulo.value);  
+            sinopsesedf.push(sinopse.value);
+            contedf.push(cont.value);
+            matSelec = 'materia_edFinanceira';
+            break;
+        case 19: 
+            titulosr.push(titulo.value);  
+            sinopsesr.push(sinopse.value);
+            contr.push(cont.value);
+            matSelec = 'materia_redacao';
+            break; 
+        case 20: 
+            titulosenem.push(titulo.value);  
+            sinopsesenem.push(sinopse.value);
+            contenem.push(cont.value);
+            matSelec = 'materia_enem';
+            break;
     }
-    if(materias[0] == 2){
-        j[1]++
-        document.querySelector(`div.materia_matematica`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[1]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[1]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosm.push(titulo.value);  
-        sinopsesm.push(sinopse.value);
-        contm.push(cont.value);
+    
+    document.querySelector(`.background-conteudo-materia`).innerHTML += `<button class="container-conteudo-materia ${matSelec}"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p>${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
+
+    switch (materias[0]){
+        case 1: 
+            document.querySelector('.materia_portugues').style.display = 'inline-block';
+            break;
+        // case 2: 
+        //     document.querySelectorAll('.materia_matematica').style.display = 'inline-block';
+        //     break;
+        // case 3: 
+        //     document.querySelectorAll('.materia_biologia').style.display = 'inline-block';
+        //     break;
+        // case 4: 
+        //     document.querySelectorAll('.materia_fisica').style.display = 'inline-block';
+        //     break;
+        // case 5: 
+        //     document.querySelectorAll('.materia_quimica').style.display = 'inline-block';
+        //     break;
+        // case 6: 
+        //     document.querySelectorAll('.materia_filosofia').style.display = 'inline-block';
+        //     break;
+        // case 7: 
+        //     document.querySelectorAll('.materia_ingles').style.display = 'inline-block';
+        //     break;
+        // case 8: 
+        //     document.querySelectorAll('.materia_espanhol').style.display = 'inline-block';
+        //     break;
+        // case 9: 
+        //     document.querySelectorAll('.materia_geografia').style.display = 'inline-block';
+        //     break;
+        // case 10: 
+        //     document.querySelectorAll('.materia_historia').style.display = 'inline-block';
+        //     break;
+        // case 11: 
+        //     document.querySelectorAll('.materia_sociologia').style.display = 'inline-block';
+        //     break;
+        // case 12: 
+        //     document.querySelectorAll('.materia_edFisica').style.display = 'inline-block';
+        //     break;
+        // case 13: 
+        //     document.querySelectorAll('.materia_artes').style.display = 'inline-block';
+        //     break;
+        // case 14: 
+        //     document.querySelectorAll('.materia_literatura').style.display = 'inline-block';
+        //     break;
+        // case 15: 
+        //     document.querySelectorAll('.materia_programacao').style.display = 'inline-block';
+        //     break;
+        // case 16: 
+        //     document.querySelectorAll('.materia_photoshop').style.display = 'inline-block';
+        //     break;
+        // case 17: 
+        //     document.querySelectorAll('.materia_meioAmbiente').style.display = 'inline-block';
+        //     break;
+        // case 18: 
+        //     document.querySelectorAll('.materia_edFinanceira').style.display = 'inline-block';
+        //     break;
+        // case 19: 
+        //     document.querySelectorAll('.materia_redacao').style.display = 'inline-block';
+        //     break; 
+        // case 20: 
+        //     document.querySelectorAll('.materia_enem').style.display = 'inline-block';
+        //     break;
     }
-    if(materias[0] == 3){
-        j[2]++
-        document.querySelector(`div.materia_biologia`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[2]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[2]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosb.push(titulo.value);  
-        sinopsesb.push(sinopse.value);
-        contb.push(cont.value);
-    }
-    if(materias[0] == 4){
-        j[3]++
-        document.querySelector(`div.materia_fisica`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[3]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[3]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosf.push(titulo.value);  
-        sinopsesf.push(sinopse.value);
-        contf.push(cont.value);
-    }
-    if(materias[0] == 5){
-        j[4]++
-        document.querySelector(`div.materia_quimica`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[4]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[4]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosq.push(titulo.value);  
-        sinopsesq.push(sinopse.value);
-        contq.push(cont.value);
-    }
-    if(materias[0] == 6){
-        j[5]++
-        document.querySelector(`div.materia_filosofia`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[5]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[5]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosfilo.push(titulo.value);  
-        sinopsesfilo.push(sinopse.value);
-        contfilo.push(cont.value);
-    }
-    if(materias[0] == 7){
-        j[6]++
-        document.querySelector(`div.materia_ingles`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[6]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[6]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosi.push(titulo.value);  
-        sinopsesi.push(sinopse.value);
-        conti.push(cont.value);
-    }
-    if(materias[0] == 8){
-        j[7]++
-        document.querySelector(`div.materia_espanhol`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[7]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[7]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulose.push(titulo.value);  
-        sinopsese.push(sinopse.value);
-        conte.push(cont.value);
-    }
-    if(materias[0] == 9){
-        j[8]++
-        document.querySelector(`div.materia_geografia`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[8]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[8]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosg.push(titulo.value);  
-        sinopsesg.push(sinopse.value);
-        contg.push(cont.value);
-    }
-    if(materias[0] == 10){
-        j[9]++
-        document.querySelector(`div.materia_historia`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[9]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[9]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosh.push(titulo.value);  
-        sinopsesh.push(sinopse.value);
-        conth.push(cont.value);
-    }
-    if(materias[0] == 11){
-        j[10]++
-        document.querySelector(`div.materia_sociologia`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[10]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[10]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        tituloss.push(titulo.value);  
-        sinopsess.push(sinopse.value);
-        conts.push(cont.value);
-    }
-    if(materias[0] == 12){
-        j[11]++
-        document.querySelector(`div.materia_ed_fisica`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[11]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[11]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosed.push(titulo.value);  
-        sinopsesed.push(sinopse.value);
-        conted.push(cont.value);
-    }
-    if(materias[0] == 13){
-        j[12]++
-        document.querySelector(`div.materia_artes`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[12]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[12]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosa.push(titulo.value);  
-        sinopsesa.push(sinopse.value);
-        conta.push(cont.value);
-    }
-    if(materias[0] == 14){
-        j[13]++
-        document.querySelector(`div.materia_literatura`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[13]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[13]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosl.push(titulo.value);  
-        sinopsesl.push(sinopse.value);
-        contl.push(cont.value);
-    }
-    if(materias[0] == 15){
-        j[14]++
-        document.querySelector(`div.materia_programacao`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[14]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[14]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosprog.push(titulo.value);  
-        sinopsesprog.push(sinopse.value);
-        contprog.push(cont.value);
-    }
-    if(materias[0] == 16){
-        j[15]++
-        document.querySelector(`div.materia_photoshop`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[15]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[15]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosph.push(titulo.value);  
-        sinopsesph.push(sinopse.value);
-        contph.push(cont.value);
-    }
-    if(materias[0] == 17){
-        j[16]++
-        document.querySelector(`div.materia_meio_ambiente`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[16]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[16]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosma.push(titulo.value);  
-        sinopsesma.push(sinopse.value);
-        contma.push(cont.value);
-    }
-    if(materias[0] == 18){
-        j[17]++
-        document.querySelector(`div.materia_ed_financeira`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[17]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[17]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosedf.push(titulo.value);  
-        sinopsesedf.push(sinopse.value);
-        contedf.push(cont.value);
-    }
-    if(materias[0] == 19){
-        j[18]++
-        document.querySelector(`div.materia_redacao`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[18]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[18]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosr.push(titulo.value);  
-        sinopsesr.push(sinopse.value);
-        contr.push(cont.value);
-    }
-    if(materias[0] == 20){
-        j[19]++;
-        document.querySelector(`div.materia_enem`).innerHTML += `<button class="container-conteudo-materia" onclick="clicar_conteudo${j[19]}()"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p class="p${j[19]}">${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
-        titulosenem.push(titulo.value);  
-        sinopsesenem.push(sinopse.value);
-        contenem.push(cont.value);
-    }
+
+
+
+
+
     voltar_conteudo()
     titulo.value = '';
     sinopse.value = '';

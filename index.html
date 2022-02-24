@@ -256,26 +256,26 @@
     
             <div class="main-materias">
                 <div class="grade-materias">
-                    <button class="container-materia materia-portugues" onclick="portugues()"></button><!--container-materia-->
-                    <button class="container-materia materia-matematica" onclick="matematica()"></button><!--container-materia-->
-                    <button class="container-materia materia-biologia" onclick="biologia()"></button><!--container-materia-->
-                    <button class="container-materia materia-fisica" onclick="fisica()"></button><!--container-materia-->
-                    <button class="container-materia materia-quimica" onclick="quimica()"></button><!--container-materia-->
-                    <button class="container-materia materia-filosofia" onclick="filosofia()"></button><!--container-materia-->
-                    <button class="container-materia materia-ingles" onclick="ingles()"></button><!--container-materia-->
-                    <button class="container-materia materia-espanhol" onclick="espanhol()"></button><!--container-materia-->
-                    <button class="container-materia materia-geografia" onclick="geografia()"></button><!--container-materia-->
-                    <button class="container-materia materia-historia" onclick="historia()"></button><!--container-materia-->
-                    <button class="container-materia materia-sociologia" onclick="sociologia()"></button><!--container-materia-->
-                    <button class="container-materia materia-ed-fisica" onclick="ed_fisica()"></button><!--container-materia-->
-                    <button class="container-materia materia-artes" onclick="artes()"></button><!--container-materia-->
-                    <button class="container-materia materia-literatura" onclick="literatura()"></button><!--container-materia-->
-                    <button class="container-materia materia-programacao" onclick="programacao()"></button><!--container-materia-->
-                    <button class="container-materia materia-photoshop" onclick="photoshop()"></button><!--container-materia-->
-                    <button class="container-materia materia-meio-ambiente" onclick="meio_ambiente()"></button><!--container-materia-->
-                    <button class="container-materia materia-ed-financeira" onclick="ed_financeira()"></button><!--container-materia-->
-                    <button class="container-materia materia-redacao" onclick="redacao()"></button><!--container-materia-->
-                    <button class="container-materia materia-enem" onclick="enem()"></button><!--container-materia-->               
+                    <button class="container-materia materia-portugues"></button><!--container-materia-->
+                    <button class="container-materia materia-matematica"></button><!--container-materia-->
+                    <button class="container-materia materia-biologia" ></button><!--container-materia-->
+                    <button class="container-materia materia-fisica"></button><!--container-materia-->
+                    <button class="container-materia materia-quimica"></button><!--container-materia-->
+                    <button class="container-materia materia-filosofia"></button><!--container-materia-->
+                    <button class="container-materia materia-ingles"></button><!--container-materia-->
+                    <button class="container-materia materia-espanhol"></button><!--container-materia-->
+                    <button class="container-materia materia-geografia"></button><!--container-materia-->
+                    <button class="container-materia materia-historia"></button><!--container-materia-->
+                    <button class="container-materia materia-sociologia"></button><!--container-materia-->
+                    <button class="container-materia materia-ed-fisica"></button><!--container-materia-->
+                    <button class="container-materia materia-artes"></button><!--container-materia-->
+                    <button class="container-materia materia-literatura"></button><!--container-materia-->
+                    <button class="container-materia materia-programacao"></button><!--container-materia-->
+                    <button class="container-materia materia-photoshop"></button><!--container-materia-->
+                    <button class="container-materia materia-meio-ambiente"></button><!--container-materia-->
+                    <button class="container-materia materia-ed-financeira"></button><!--container-materia-->
+                    <button class="container-materia materia-redacao"></button><!--container-materia-->
+                    <button class="container-materia materia-enem"></button><!--container-materia-->               
                 </div><!--grade-materias-->      
             </div><!--main-materias-->
     
@@ -285,28 +285,19 @@
         <div class="background-conteudo-materias">
             <h2 class="titulo-background-conteudo-materias"></h2>
     
-            <div class="background-conteudo-materia materia_portugues"></div>
-            <div class="background-conteudo-materia materia_matematica"></div>
-            <div class="background-conteudo-materia materia_biologia"></div>  
-            <div class="background-conteudo-materia materia_fisica"></div>
-            <div class="background-conteudo-materia materia_quimica"></div> 
-            <div class="background-conteudo-materia materia_filosofia"></div>
-            <div class="background-conteudo-materia materia_ingles"></div>
-            <div class="background-conteudo-materia materia_espanhol"></div>
-            <div class="background-conteudo-materia materia_geografia"></div>
-            <div class="background-conteudo-materia materia_historia"></div>
-            <div class="background-conteudo-materia materia_sociologia"></div>
-            <div class="background-conteudo-materia materia_ed_fisica"></div> 
-            <div class="background-conteudo-materia materia_artes"></div>
-            <div class="background-conteudo-materia materia_literatura"></div>
-            <div class="background-conteudo-materia materia_programacao"></div>
-            <div class="background-conteudo-materia materia_photoshop"></div> 
-            <div class="background-conteudo-materia materia_meio_ambiente"></div>
-            <div class="background-conteudo-materia materia_ed_financeira"></div> 
-            <div class="background-conteudo-materia materia_redacao"></div>
-            <div class="background-conteudo-materia materia_enem"></div>
-    
-            
+            <div class="background-conteudo-materia">
+                <button class="container-conteudo-materia materia_portugues visivel">
+                    <div class="imagem-conteudo"></div>
+                    <div class="texto-conteudo">
+                        <div class="titulo-texto-conteudo">
+                            <p>Box teste</p>
+                        </div>
+                        <div class="sinopse-texto-conteudo">
+                            <p>Box testeeeeeeeeeeeeeeee</p>
+                        </div>
+                    </div>
+                </button>
+            </div>
     
             <button class="voltar-materias" onclick="voltar_materias()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
               
@@ -318,10 +309,13 @@
                     <input type="text" id="sinopse" maxlength="80" placeholder="Sinopse">
                     <textarea name="cont" id="cont" cols="45" rows="25" placeholder="Digite somente o conteúdo"></textarea>
                     <button class="adicionar" onclick="adicionar()">Adicionar</button>
-                </div><!--inputs-adicionar-conteudo-->  
-                <button class="criar" onclick="voltar_conteudo()" style="background-color: red;"><p>-</p></button> 
+                </div><!--inputs-adicionar-conteudo--> 
+
+                <button class="criar" onclick="voltar_conteudo()" style="background-color: red;"><p>-</p></button>
+
             </div><!--adicionar-conteudo-->
         </div><!--background-conteudo-materia-->   
+
         <div class="tela-conteudo">
             <button class="voltar-materias" onclick="voltar_conteudo()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
             <h2 class="titulo-tela-conteudo"></h2>
