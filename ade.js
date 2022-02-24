@@ -367,7 +367,7 @@ var texto = [];
 var resp = [];
 var perguntas = [];
 
-quant = [resp.length, 0];
+var quant = [resp.length, 0];
 
 for(let a = 0; a < quant[0]; a++){
     document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
@@ -606,41 +606,185 @@ var tituloMateria = '';
 
 
 
-    for(let l = 0; l < cont_materia.length; l++){
-        cont_materia[l].addEventListener('click', function(){
-            document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-            document.querySelector('div.background-materia').style.display = 'none';
+for(let l = 0; l < cont_materia.length; l++){
+    cont_materia[l].addEventListener('click', function(){
+        document.querySelector('div.background-conteudo-materias').style.display = 'flex';
+        document.querySelector('div.background-materia').style.display = 'none';
+        var matPor = document.querySelectorAll('.materia_portugues');
+        var matMat = document.querySelectorAll('.materia_matematica');
+        var matBio = document.querySelectorAll('.materia_biologia');
+        var matFis = document.querySelectorAll('.materia_fisica');
+        var matQui = document.querySelectorAll('.materia_quimica');
+        var matFilo = document.querySelectorAll('.materia_filosofia');
+        var matIng = document.querySelectorAll('.materia_ingles');
+        var matEsp = document.querySelectorAll('.materia_espanhol');
+        var matGeo = document.querySelectorAll('.materia_geografia');
+        var matHis = document.querySelectorAll('.materia_historia');
+        var matSoc = document.querySelectorAll('.materia_sociologia');
+        var matEdFis = document.querySelectorAll('.materia_edFisica');
+        var matArt = document.querySelectorAll('.materia_artes');
+        var matLit = document.querySelectorAll('.materia_literatura');
+        var matPro = document.querySelectorAll('.materia_programacao');
+        var matPho = document.querySelectorAll('.materia_photoshop');
+        var matMei = document.querySelectorAll('.materia_meioAmbiente');
+        var matEdFin = document.querySelectorAll('.materia_edFinanceira');
+        var matRed = document.querySelectorAll('.materia_redacao');
+        var matEne = document.querySelectorAll('.materia_enem');
 
-            switch (l){
-                case 0: tituloMateria = 'PORTUGUÊS'; materias[0] = 1; break;
-                case 1: tituloMateria = 'MATEMÁTICA'; materias[0] =2; break;
-                case 2: tituloMateria = 'BIOLOGIA'; materias[0] =3; break;
-                case 3: tituloMateria = 'FÍSICA'; materias[0] =4; break;
-                case 4: tituloMateria = 'QUÍMICA'; materias[0] =5; break;
-                case 5: tituloMateria = 'FILOSOFIA'; materias[0] =6; break;
-                case 6: tituloMateria = 'INGLÊS'; materias[0] =7; break;
-                case 7: tituloMateria = 'ESPANHOL'; materias[0] =8; break;
-                case 8: tituloMateria = 'GEOGRAFIA'; materias[0] =9; break;
-                case 9: tituloMateria = 'HISTÓRIA'; materias[0] =10; break;
-                case 10: tituloMateria = 'SOCIOLOGIA'; materias[0] =11; break;
-                case 11: tituloMateria = 'ED. FÍSICA'; materias[0] =12; break;
-                case 12: tituloMateria = 'ARTES'; materias[0] =13; break;
-                case 13: tituloMateria = 'LITERATURA'; materias[0] =14; break;
-                case 14: tituloMateria = 'PROGRAMAÇÃO'; materias[0] =15; break;
-                case 15: tituloMateria = 'PHOTOSHOP'; materias[0] =16; break;
-                case 16: tituloMateria = 'MEIO AMBIENTE'; materias[0] =17; break;
-                case 17: tituloMateria = 'ED. FINANCEIRA'; materias[0] =18; break;
-                case 18: tituloMateria = 'REDAÇÃO'; materias[0] =19; break;
-                case 19: tituloMateria = 'ENEM'; materias[0] =20; break; 
-            }
-            document.querySelector('h2.titulo-background-conteudo-materias').innerText = tituloMateria;
-        })
-    }
+        switch (l){
+            case 0: 
+                tituloMateria = 'PORTUGUÊS'; 
+                materias[0] = 1;
+                for(let i=0; i < matPor.length; i++){
+                    matPor[i].style.display = 'inline-block'
+                }
+                break;
+            case 1: 
+                tituloMateria = 'MATEMÁTICA'; 
+                materias[0] =2; 
+                for(let i=0; i < matMat.length; i++){
+                    matMat[i].style.display = 'inline-block'
+                }
+                break;
+            case 2: 
+                tituloMateria = 'BIOLOGIA';
+                materias[0] =3;
+                for(let i=0; i < matBio.length; i++){
+                    matBio[i].style.display = 'inline-block'
+                }
+                break;
+            case 3: 
+                tituloMateria = 'FÍSICA'; 
+                materias[0] =4; 
+                for(let i=0; i < matFis.length; i++){
+                    matFis[i].style.display = 'inline-block'
+                }
+                break;
+            case 4: 
+                tituloMateria = 'QUÍMICA'; 
+                materias[0] =5; 
+                for(let i=0; i < matQui.length; i++){
+                    matQui[i].style.display = 'inline-block'
+                }
+                break;
+            case 5: 
+                tituloMateria = 'FILOSOFIA'; 
+                materias[0] =6; 
+                for(let i=0; i < matFilo.length; i++){
+                    matFilo[i].style.display = 'inline-block'
+                }
+                break;
+            case 6: 
+                tituloMateria = 'INGLÊS'; 
+                materias[0] =7; 
+                for(let i=0; i < matIng.length; i++){
+                    matIng[i].style.display = 'inline-block'
+                }
+                break;
+            case 7: 
+                tituloMateria = 'ESPANHOL'; 
+                materias[0] =8;
+                for(let i=0; i < matEsp.length; i++){
+                    matEsp[i].style.display = 'inline-block'
+                } 
+                break;
+            case 8: 
+                tituloMateria = 'GEOGRAFIA'; 
+                materias[0] =9; 
+                for(let i=0; i < matGeo.length; i++){
+                    matGeo[i].style.display = 'inline-block'
+                }
+                break;
+            case 9: 
+                tituloMateria = 'HISTÓRIA'; 
+                materias[0] =10; 
+                for(let i=0; i < matHis.length; i++){
+                    matHis[i].style.display = 'inline-block'
+                }
+                break;
+            case 10: 
+                tituloMateria = 'SOCIOLOGIA'; 
+                materias[0] =11; 
+                for(let i=0; i < matSoc.length; i++){
+                    matSoc[i].style.display = 'inline-block'
+                }
+                break;
+            case 11: 
+                tituloMateria = 'ED. FÍSICA'; 
+                materias[0] =12;
+                for(let i=0; i < matEdFis.length; i++){
+                    matEdFis[i].style.display = 'inline-block'
+                }
+                break;
+            case 12: 
+                tituloMateria = 'ARTES'; 
+                materias[0] =13; 
+                for(let i=0; i < matArt.length; i++){
+                    matArt[i].style.display = 'inline-block'
+                }
+                break;
+            case 13: 
+                tituloMateria = 'LITERATURA'; 
+                materias[0] =14; 
+                for(let i=0; i < matLit.length; i++){
+                    matLit[i].style.display = 'inline-block'
+                }
+                break;
+            case 14: 
+                tituloMateria = 'PROGRAMAÇÃO'; 
+                materias[0] =15; 
+                for(let i=0; i < matPro.length; i++){
+                    matPro[i].style.display = 'inline-block'
+                }
+                break;
+            case 15: 
+                tituloMateria = 'PHOTOSHOP'; 
+                materias[0] =16; 
+                for(let i=0; i < matPho.length; i++){
+                    matPho[i].style.display = 'inline-block'
+                }
+                break;
+            case 16: 
+                tituloMateria = 'MEIO AMBIENTE'; 
+                materias[0] =17;
+                for(let i=0; i < matMei.length; i++){
+                    matMei[i].style.display = 'inline-block'
+                } 
+                break;
+            case 17: 
+                tituloMateria = 'ED. FINANCEIRA'; 
+                materias[0] =18; 
+                for(let i=0; i < matEdFin.length; i++){
+                    matEdFin[i].style.display = 'inline-block'
+                }
+                break;
+            case 18: 
+                tituloMateria = 'REDAÇÃO'; 
+                materias[0] =19; 
+                for(let i=0; i < matRed.length; i++){
+                    matRed[i].style.display = 'inline-block'
+                }
+                break;
+            case 19: 
+                tituloMateria = 'ENEM'; 
+                materias[0] =20; 
+                for(let i=0; i < matEne.length; i++){
+                    matEne[i].style.display = 'inline-block'
+                }
+                break; 
+        }
+        document.querySelector('h2.titulo-background-conteudo-materias').innerText = tituloMateria;
+    })
+}
 
 function voltar_materias(){
     document.querySelector('div.background-materia').style.display = 'block';
     document.querySelector('div.background-conteudo-materias').style.display = 'none';
-    materias[0] = 0
+    materias[0] = 0;
+    let materiaGeral = document.querySelectorAll('.container-conteudo-materia');
+    for(let i=0; i < materiaGeral.length; i++){
+        materiaGeral[i].style.display = 'none';
+    }
 }
 
 //-----------------------------conteudos-------------------------------------
@@ -668,6 +812,8 @@ function adicionar(){
     let sinopse = document.querySelector('input#sinopse');
     let cont = document.querySelector('textarea#cont');
     let matSelec = '';
+    
+
 
     switch (materias[0]){
         case 1: 
@@ -791,81 +937,138 @@ function adicionar(){
             matSelec = 'materia_enem';
             break;
     }
-    
     document.querySelector(`.background-conteudo-materia`).innerHTML += `<button class="container-conteudo-materia ${matSelec}"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p>${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
+
+    var matPor = document.querySelectorAll('.materia_portugues');
+    var matMat = document.querySelectorAll('.materia_matematica');
+    var matBio = document.querySelectorAll('.materia_biologia');
+    var matFis = document.querySelectorAll('.materia_fisica');
+    var matQui = document.querySelectorAll('.materia_quimica');
+    var matFilo = document.querySelectorAll('.materia_filosofia');
+    var matIng = document.querySelectorAll('.materia_ingles');
+    var matEsp = document.querySelectorAll('.materia_espanhol');
+    var matGeo = document.querySelectorAll('.materia_geografia');
+    var matHis = document.querySelectorAll('.materia_historia');
+    var matSoc = document.querySelectorAll('.materia_sociologia');
+    var matEdFis = document.querySelectorAll('.materia_edFisica');
+    var matArt = document.querySelectorAll('.materia_artes');
+    var matLit = document.querySelectorAll('.materia_literatura');
+    var matPro = document.querySelectorAll('.materia_programacao');
+    var matPho = document.querySelectorAll('.materia_photoshop');
+    var matMei = document.querySelectorAll('.materia_meioAmbiente');
+    var matEdFin = document.querySelectorAll('.materia_edFinanceira');
+    var matRed = document.querySelectorAll('.materia_redacao');
+    var matEne = document.querySelectorAll('.materia_enem');
 
     switch (materias[0]){
         case 1: 
-            document.querySelector('.materia_portugues').style.display = 'inline-block';
+            for(let i=0; i < matPor.length; i++){
+                matPor[i].style.display = 'inline-block'
+            }
             break;
-        // case 2: 
-        //     document.querySelectorAll('.materia_matematica').style.display = 'inline-block';
-        //     break;
-        // case 3: 
-        //     document.querySelectorAll('.materia_biologia').style.display = 'inline-block';
-        //     break;
-        // case 4: 
-        //     document.querySelectorAll('.materia_fisica').style.display = 'inline-block';
-        //     break;
-        // case 5: 
-        //     document.querySelectorAll('.materia_quimica').style.display = 'inline-block';
-        //     break;
-        // case 6: 
-        //     document.querySelectorAll('.materia_filosofia').style.display = 'inline-block';
-        //     break;
-        // case 7: 
-        //     document.querySelectorAll('.materia_ingles').style.display = 'inline-block';
-        //     break;
-        // case 8: 
-        //     document.querySelectorAll('.materia_espanhol').style.display = 'inline-block';
-        //     break;
-        // case 9: 
-        //     document.querySelectorAll('.materia_geografia').style.display = 'inline-block';
-        //     break;
-        // case 10: 
-        //     document.querySelectorAll('.materia_historia').style.display = 'inline-block';
-        //     break;
-        // case 11: 
-        //     document.querySelectorAll('.materia_sociologia').style.display = 'inline-block';
-        //     break;
-        // case 12: 
-        //     document.querySelectorAll('.materia_edFisica').style.display = 'inline-block';
-        //     break;
-        // case 13: 
-        //     document.querySelectorAll('.materia_artes').style.display = 'inline-block';
-        //     break;
-        // case 14: 
-        //     document.querySelectorAll('.materia_literatura').style.display = 'inline-block';
-        //     break;
-        // case 15: 
-        //     document.querySelectorAll('.materia_programacao').style.display = 'inline-block';
-        //     break;
-        // case 16: 
-        //     document.querySelectorAll('.materia_photoshop').style.display = 'inline-block';
-        //     break;
-        // case 17: 
-        //     document.querySelectorAll('.materia_meioAmbiente').style.display = 'inline-block';
-        //     break;
-        // case 18: 
-        //     document.querySelectorAll('.materia_edFinanceira').style.display = 'inline-block';
-        //     break;
-        // case 19: 
-        //     document.querySelectorAll('.materia_redacao').style.display = 'inline-block';
-        //     break; 
-        // case 20: 
-        //     document.querySelectorAll('.materia_enem').style.display = 'inline-block';
-        //     break;
+        case 2: 
+            for(let i=0; i < matMat.length; i++){
+                matMat[i].style.display = 'inline-block'
+            }
+            break;
+        case 3: 
+            for(let i=0; i < matBio.length; i++){
+                matBio[i].style.display = 'inline-block'
+            }
+            break;
+        case 4: 
+            for(let i=0; i < matFis.length; i++){
+                matFis[i].style.display = 'inline-block'
+            }
+            break;
+        case 5: 
+            for(let i=0; i < matQui.length; i++){
+                matQui[i].style.display = 'inline-block'
+            }
+            break;
+        case 6: 
+            for(let i=0; i < matFilo.length; i++){
+                matFilo[i].style.display = 'inline-block'
+            }
+            break;
+        case 7: 
+            for(let i=0; i < matIng.length; i++){
+                matIng[i].style.display = 'inline-block'
+            }
+            break;
+        case 8: 
+            for(let i=0; i < matEsp.length; i++){
+                matEsp[i].style.display = 'inline-block'
+            } 
+            break;
+        case 9: 
+            for(let i=0; i < matGeo.length; i++){
+                matGeo[i].style.display = 'inline-block'
+            }
+            break;
+        case 10: 
+            for(let i=0; i < matHis.length; i++){
+                matHis[i].style.display = 'inline-block'
+            }
+            break;
+        case 11: 
+            for(let i=0; i < matSoc.length; i++){
+                matSoc[i].style.display = 'inline-block'
+            }
+            break;
+        case 12: 
+            for(let i=0; i < matEdFis.length; i++){
+                matEdFis[i].style.display = 'inline-block'
+            }
+            break;
+        case 13: 
+            for(let i=0; i < matArt.length; i++){
+                matArt[i].style.display = 'inline-block'
+            }
+            break;
+        case 14: 
+            for(let i=0; i < matLit.length; i++){
+                matLit[i].style.display = 'inline-block'
+            }
+            break;
+        case 15: 
+            for(let i=0; i < matPro.length; i++){
+                matPro[i].style.display = 'inline-block'
+            }
+            break;
+        case 16: 
+            for(let i=0; i < matPho.length; i++){
+                matPho[i].style.display = 'inline-block'
+            }
+            break;
+        case 17: 
+            for(let i=0; i < matMei.length; i++){
+                matMei[i].style.display = 'inline-block'
+            } 
+            break;
+        case 18: 
+            for(let i=0; i < matEdFin.length; i++){
+                matEdFin[i].style.display = 'inline-block'
+            }
+            break;
+        case 19: 
+            for(let i=0; i < matRed.length; i++){
+                matRed[i].style.display = 'inline-block'
+            }
+            break;
+        case 20: 
+            for(let i=0; i < matEne.length; i++){
+                matEne[i].style.display = 'inline-block'
+            }
+            break;  
+         
     }
-
-
-
-
-
     voltar_conteudo()
     titulo.value = '';
     sinopse.value = '';
     cont.value = '';
 }
+
 
 
 
