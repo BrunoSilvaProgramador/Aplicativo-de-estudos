@@ -87,7 +87,7 @@
                 <div class="box-home">
                     <button class="imagem-box-home imagem-duvidas" onclick="duvidas()"></button><!--imagem-box-home--> 
                     <button class="texto-box-home" onclick="duvidas()">
-                        DÚVIDAS FREQUENTES
+                        DÚVIDAS
                     </button><!--texto-box-home-->
                 </div><!--box-home imagem-duvidas-->
     
@@ -128,7 +128,7 @@
                     <div class="box-home">
                         <button class="imagem-box-home imagem-duvidas" onclick="duvidas()"></button><!--imagem-box-home--> 
                         <button class="texto-box-home" onclick="duvidas()">
-                            DÚVIDAS FREQUENTES
+                            DÚVIDAS
                         </button><!--texto-box-home-->
                     </div><!--box-home imagem-duvidas-->
     
@@ -166,7 +166,7 @@
     
                 <div class="box-mobile imagem-duvidas">
                     <button class="texto-box-home" onclick="duvidas()">
-                        DÚVIDAS FREQUENTES
+                        DÚVIDAS 
                     </button><!--texto-box-home-->
                 </div><!--box-home imagem-duvidas-->
     
@@ -181,8 +181,8 @@
             <!-- ------------------------------------------------ -->
     
             <div class="login">
-                <button class="logar" onclick="logar()">LOGIN</button>
-                <button class="cadastrar" onclick="cadastrar()">CADASTRAR</button>
+                <button class="logar button_d" onclick="logar()"><span>LOGIN</span></button>
+                <button class="cadastrar button_d" onclick="cadastrar()"><span>CADASTRAR</span></button>
             </div><!--login-->
     
             <div class="creditos">Desenvolvido por Bruno Rafael</div><!--creditos-->
@@ -192,20 +192,23 @@
         <!-- ------------------TELA DE LOGIN-------------------- -->
     
         <div class="tela-de-login">
-          <div class="box-form-login">
-            <form class="box-login">
-                <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
-    
-                <div class="titulo"><h2>TELA DE LOGIN</h2></div>
-    
-                <input type="email" id="email" placeholder="Digite seu email">
-                <input type="password"  id="password" placeholder="Digite sua senha">
-                <input type="button" id="enviar" value="Enviar" onclick="enviar_login()">
-    
-            </form><!--box-login-->
-            
-            <p class="ja-possui-conta">Novo por aqui? <button onclick="cadastrar()" class="cadastre-se">Cadastre-se</button></p>
-          </div><!--box-form-login-->
+            <div class="box-form-login">
+                <form class="box-login">
+                    <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
+        
+                    <div class="titulo"><h2>TELA DE LOGIN</h2></div>
+        
+                    <div class="inputs-login">
+                        <input type="email" id="email" placeholder="Digite seu email">
+                        <input type="password"  id="password" placeholder="Digite sua senha">
+                    </div>
+
+                    <input type="button" id="enviar" value="Enviar" onclick="enviar_login()">
+        
+                </form><!--box-login-->
+                
+                <p class="ja-possui-conta">Novo por aqui? <button onclick="cadastrar()" class="cadastre-se">Cadastre-se</button></p>
+            </div><!--box-form-login-->
             
         </div><!--tela de login-->
     
@@ -218,26 +221,26 @@
                     <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
         
                     <div class="titulo"><h2>TELA DE CADASTRO</h2></div>
-        
-                    <input type="text" id="nome" placeholder="Nome" required>
-                    <input type="email" id="email-cadastro" placeholder="Email" required>
-                    <input type="password"  id="password-cadastro" placeholder="Senha" required>
-                    <input type="password"  id="password-confirmar" placeholder="Confirme sua senha" required>
-                    <input type="text" id="name-id" placeholder="Name ID" maxlength="12" required>
-        
-                    <div class="situacao"> <!--ESCOLHER PROFESSOR OU ALUNO-->
-        
-                        <div class="box-situacao">
-                            <input type="radio" name="alunoprofessor" id="aluno" value="aluno">
-                            <label for="aluno">Aluno</label>
-                        </div><!--box-situacao1-->
-        
-                        <div class="box-situacao">
-                            <input type="radio" name="alunoprofessor" id="professor" value="professor">
-                            <label for="professor">Professor</label>
-                        </div><!--box-situacao2-->
-        
-                    </div><!--situacao -->
+                    
+                    <div class="inputs-login">
+                        <input type="text" id="name-id" placeholder="Nome" maxlength="12" required>
+                        <input type="email" id="email-cadastro" placeholder="Email" required>
+                        <input type="password"  id="password-cadastro" placeholder="Senha" required>
+                        <input type="password"  id="password-confirmar" placeholder="Confirme sua senha" required>
+                        
+                        <div class="situacao"> <!--ESCOLHER PROFESSOR OU ALUNO-->
+            
+                            <div class="box-situacao">
+                                <input type="radio" name="alunoprofessor" id="aluno" value="aluno">
+                                <label for="aluno">Aluno</label>
+                            </div><!--box-situacao1-->
+            
+                            <div class="box-situacao">
+                                <input type="radio" name="alunoprofessor" id="professor" value="professor">
+                                <label for="professor">Professor</label>
+                            </div><!--box-situacao2-->        
+                        </div><!--situacao -->
+                    </div>
         
                     <input type="button" id="enviar-cadastro" value="Enviar" onclick="enviar_cadastro()">
                     
@@ -256,26 +259,26 @@
     
             <div class="main-materias">
                 <div class="grade-materias">
-                    <button class="container-materia materia-portugues"></button><!--container-materia-->
-                    <button class="container-materia materia-matematica"></button><!--container-materia-->
-                    <button class="container-materia materia-biologia" ></button><!--container-materia-->
-                    <button class="container-materia materia-fisica"></button><!--container-materia-->
-                    <button class="container-materia materia-quimica"></button><!--container-materia-->
-                    <button class="container-materia materia-filosofia"></button><!--container-materia-->
-                    <button class="container-materia materia-ingles"></button><!--container-materia-->
-                    <button class="container-materia materia-espanhol"></button><!--container-materia-->
-                    <button class="container-materia materia-geografia"></button><!--container-materia-->
-                    <button class="container-materia materia-historia"></button><!--container-materia-->
-                    <button class="container-materia materia-sociologia"></button><!--container-materia-->
-                    <button class="container-materia materia-ed-fisica"></button><!--container-materia-->
-                    <button class="container-materia materia-artes"></button><!--container-materia-->
-                    <button class="container-materia materia-literatura"></button><!--container-materia-->
-                    <button class="container-materia materia-programacao"></button><!--container-materia-->
-                    <button class="container-materia materia-photoshop"></button><!--container-materia-->
-                    <button class="container-materia materia-meio-ambiente"></button><!--container-materia-->
-                    <button class="container-materia materia-ed-financeira"></button><!--container-materia-->
-                    <button class="container-materia materia-redacao"></button><!--container-materia-->
-                    <button class="container-materia materia-enem"></button><!--container-materia-->               
+                    <button class="container-materia"><div class="card"><div class="materia-portugues card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-matematica card_content"></div></div></button>
+                    <button class="container-materia" ><div class="card"><div class="materia-biologia card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-fisica card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-quimica card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-filosofia card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-ingles card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-espanhol card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-geografia card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-historia card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-sociologia card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-ed-fisica card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-artes card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-literatura card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-programacao card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-photoshop card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-meio-ambiente card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-ed-financeira card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-redacao card_content"></div></div></button>
+                    <button class="container-materia"><div class="card"><div class="materia-enem card_content"></div></div></button>              
                 </div><!--grade-materias-->      
             </div><!--main-materias-->
     

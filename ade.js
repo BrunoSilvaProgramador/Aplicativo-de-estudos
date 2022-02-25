@@ -5,7 +5,6 @@ var tela_de_login = document.querySelector('div.tela-de-login');
 var tela_de_cadatro = document.querySelector('div.tela-de-cadastro');
 var login_email = document.querySelector('input#email');
 var login_password = document.querySelector('input#password');
-var nome_cadastro = document.getElementById('nome');
 var email_cadastro = document.getElementById('email-cadastro');
 var password_cadastro = document.getElementById('password-cadastro');
 var password_confirmar = document.getElementById('password-confirmar');
@@ -69,12 +68,10 @@ function logar(){
     background.style.display = 'none';
     tela_de_login.style.display = 'flex';
     tela_de_cadatro.style.display = 'none';
-    nome_cadastro.value = '';
     email_cadastro.value = '';
     password_cadastro.value = '';
     password_confirmar.value = '';
     name_id.value = '';
-    nome_cadastro.focus();
     // login_email.value = '';
     // login_password.value = '';
 }
@@ -85,7 +82,6 @@ function cadastrar(){
     login_email.value = '';
     login_password.value = '';
     login_email.focus();
-    // nome_cadastro.value = '';
     // email_cadastro.value = '';
     // password_cadastro.value = '';
     // password_confirmar.value = '';
@@ -103,7 +99,6 @@ function voltar(){
     confirmar_para_alterar.style.background = "transparent";
     nova_senha.style.background = "transparent";
     confirmar_nova_senha.style.background = "transparent";
-    nome_cadastro.value = '';
     email_cadastro.value = '';
     password_cadastro.value = '';
     password_confirmar.value = '';
@@ -166,10 +161,9 @@ function enviar_login(){
 
 function enviar_cadastro() {
     let tipo = verificartipo() // verifica se é aluno ou professor
-    if(nome_cadastro.value.length == 0 || email_cadastro.value.length == 0 || password_cadastro.value.length == 0 || password_confirmar.value.length == 0 || name_id.value.length == 0){ //se estiver faltando algum dado de cadastro, verifica qual é e mostra pro usuário
+    if(email_cadastro.value.length == 0 || password_cadastro.value.length == 0 || password_confirmar.value.length == 0 || name_id.value.length == 0){ //se estiver faltando algum dado de cadastro, verifica qual é e mostra pro usuário
         tela_alert.style.display = 'block';
         texto_alert.innerText = `Todos os dados devem ser preenchidos corretamente!`;
-        if(nome_cadastro.value.length == 0){nome_cadastro.style.background = "#fa7e7e65"}else{nome_cadastro.style.background = "transparent";}
         if(email_cadastro.value.length == 0){email_cadastro.style.background = "#fa7e7e65"}else{email_cadastro.style.background = "transparent";}
         if(password_cadastro.value.length == 0){password_cadastro.style.background = "#fa7e7e65"}else{password_cadastro.style.background = "transparent";}
         if(password_confirmar.value.length == 0){password_confirmar.style.background = "#fa7e7e65"}else{password_confirmar.style.background = "transparent";}
@@ -202,12 +196,10 @@ function enviar_cadastro() {
                                 tela_de_cadatro.style.display = 'none';
                                 login_email.value = email_cadastro.value; // o inputs de login recebe o email cadastrado para facilitar para o usuário
                                 login_password.focus()
-                                nome_cadastro.value = ''; // os inputs de cadastro são limpos
                                 email_cadastro.value = '';
                                 password_cadastro.value = '';
                                 password_confirmar.value = '';
                                 name_id.value = '';
-                                nome_cadastro.focus();
                                 verificar_selecionado[0] = 0;
                             }else{
                                 tela_alert.style.display = 'block';
@@ -239,12 +231,10 @@ function enviar_cadastro() {
                                 tela_de_cadatro.style.display = 'none';
                                 login_email.value = email_cadastro.value; // o inputs de login recebe o email cadastrado para facilitar para o usuário
                                 login_password.focus()
-                                nome_cadastro.value = ''; // os inputs de cadastro são limpos
                                 email_cadastro.value = '';
                                 password_cadastro.value = '';
                                 password_confirmar.value = '';
                                 name_id.value = '';
-                                nome_cadastro.focus();
                                 verificar_selecionado[0] = 0;
                             }else{
                                 tela_alert.style.display = 'block';
