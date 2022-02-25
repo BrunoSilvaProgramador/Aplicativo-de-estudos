@@ -488,7 +488,6 @@ button.voltar-perfil{
     justify-content: center;
     position: relative;
     margin: 0 auto;
-    z-index: 1;
 }   
 button.voltar{
     font-size: 18px;
@@ -610,7 +609,6 @@ p.ja-possui-conta{
     justify-content: center;
     position: relative;
     margin: 0 auto;
-    z-index: 1;
 }
 
 .box-cadastro input{
