@@ -32,7 +32,7 @@ var cont = document.querySelector('textarea#cont');
 
 var dados_login_professor = []; // armazena os dados de login de professor, email[0] senha[1]  tipo[2] id name[3]
 var dados_login_aluno = []; // armazena os dados de login de aluno, email[0] senha[1]  
-var dados_mestre = ['emailteste@gmail.com', 'senhateste10']; // armazena os dados de login mestre, email[0] senha[1]  
+var dados_mestre = ['emailteste@gmail.com', 'senhateste']; // armazena os dados de login mestre, email[0] senha[1]  
 var dados = []; // recebe os dados referentes aos inputs de login para tratar e definir uma ação
 var sit = []; //  verifica se é aluno ou professor [0] e se entrou na area de aluno ou professor [1], para poder ou nao criar conteudo
 var login = []; // verifica se o individuo esta logado [0]
@@ -261,7 +261,7 @@ function enviar_cadastro() {
 // verifica se os dados fornecidos no login são iguais a algum dado fornecido no cadastro
 
 function confirmar_mestre(){
-    if(dados[0] == 'emailteste@gmail.com' && dados[1] == 'senhateste10'){
+    if(dados[0] == 'emailteste@gmail.com' && dados[1] == 'senhateste'){
         sit[0] = 'mestre';
         return true
     }else{
