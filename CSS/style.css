@@ -4,6 +4,7 @@
     box-sizing: border-box;
     word-wrap: break-word;
     scrollbar-width: none !important;
+    font-family: Phantomsans, sans-serif;
 }
 body, html{
     height: 100%;
@@ -194,7 +195,7 @@ button.imagem-perfil{
     background-image: url('../imagens/perfil.png');
     background-position: center;
     background-size: cover;
-    border: none;
+    border: 1px solid white;
     border-radius: 50%;
     margin: 3px;
     cursor: pointer;
@@ -204,6 +205,7 @@ button.nome-perfil{
     background-color: transparent;
     border: none;
     cursor: pointer;
+    color: white;
 
 }
 .opcoes-perfil{
@@ -811,7 +813,7 @@ button.container-materia:hover{
 h2.titulo-background-conteudo-materias{
     margin: 10px;
     background-image: 
-    linear-gradient(to right,  #571cc5,#7f1eee,#713de9,#00a1eb, #00eeff);
+    linear-gradient(to right, #571cc5,#7f1eee,#713de9,#00a1eb, #00eeff);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -872,7 +874,7 @@ button.container-conteudo-materia{
 }
 .sinopse-texto-conteudo{
     width: 100%;
-    height: 56px;
+    height: 52px;
     padding: 4px 8px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
@@ -970,16 +972,19 @@ button.adicionar{
     text-align: center;
     margin: 0 0 30px 0px;
     font-size: clamp(1em, 1em + 2.7vw, 2.7em);
+    color: #571cc5;
 }
 .tela-conteudo h4{
     margin: 0 0 20px 0px; 
-    font-size: clamp(0.7em, 0.5em + 1.7vw, 1.5em);  
+    font-size: clamp(0.2em, 0.3em + 1.2vw, 1.3em);  
+    color: #fdfdfd;
 }
 .tela-conteudo p{
     font-size: 17px;
     margin: 0 0 20px 0px; 
     color: rgb(68, 68, 68);  
     font-size: clamp(0.5em, 0.5em + 1vw, 1em);
+    color: rgb(182, 182, 182);
 }
 
 /* -----adicionar conteudo------ */
@@ -1332,9 +1337,6 @@ button.voltar-redes{
     .box-situacao input{
         width: 13px;
         height: 13px;
-    }
-    button.voltar-materias{
-        left: 15px;top: 80px;
     }
 
 }
