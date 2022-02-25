@@ -120,13 +120,13 @@ button.confirmar-alert{
                  15px 10px var(--color-2);
     transition: box-shadow 0.25s ease-in-out,
                  transform 0.25s ease-in-out;
-   }
+}
    
-   .box-home:hover {
+.box-home:hover {
     box-shadow: -10.275px -10.275px var(--color-1),
                  15.4px 10.275px var(--color-2);
     transform: scale(1.025);
-   }
+}
    
 button.imagem-box-home{
     width: 100%;
@@ -340,7 +340,7 @@ button.voltar-perfil{
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
 }
 .button_d {
     align-items: center;
@@ -352,7 +352,8 @@ button.voltar-perfil{
     color: #FFFFFF;
     display: flex;
     font-family: Phantomsans, sans-serif;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: bold;
     justify-content: center;
     line-height: 1em;
     max-width: 100%;
@@ -468,7 +469,7 @@ button.voltar-perfil{
     height: 50%;
     appearance: none;
     position: relative;
-    padding: 1em 2em;
+    padding: 1em 1em;
     border: 0;
     background: rgb(5, 5, 22);
     font-size: 18px;
@@ -642,8 +643,7 @@ p.ja-possui-conta{
 .box-situacao{
     width: 100px;
     display: flex;
-    justify-content: center;
-    
+    justify-content: center;   
 }
 .box-situacao input{
     width: 13px;
@@ -688,10 +688,10 @@ button.voltar-materias{
 }
 .header-materias{
     width: 100%;
-    height: 13%;
+    height: 20%;
     text-align: center;
     padding: 20px;
-    font-size: clamp(0.5em, 0.5em + 2vw, 2em);
+    font-size: clamp(0.3em, 0.5em + 1.5vw, 2em);
     background-image: 
     linear-gradient(to right, #AF40FF, #5B42F3,#00DDEB, #00DDEB);
     background-clip: text;
@@ -889,23 +889,17 @@ button.container-conteudo-materia{
 /* -----adicionar conteudo------ */
 
 button.criar{
-    width: 80px;
-    height: 80px;
-    font-size: 40px;
-    border-radius: 50%;
+    padding: 3px 17px;
+    margin: 15px 10px;
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    color: #FFFFFF;
+    font-family: Phantomsans, sans-serif;
+    font-size: 18px;
     cursor: pointer;
-    background-color: rgba(0, 0, 255, 0.445);
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0 0 4px 1px black;
-    position:absolute;
-    bottom: 80px;
-    right: 60px;
-    display: none;
-}
-button.criar p{
-    position: relative;
-    top: -2px;
 }
 .adicionar-conteudo{
     width: 100%;
@@ -920,7 +914,8 @@ button.criar p{
     display: none;
 }
 .inputs-adicionar-conteudo{
-    width: 100%;
+    width: 90%;
+    height: 90%;
     max-width : 400px;
     display: flex;
     flex-direction: column;
@@ -930,6 +925,7 @@ button.criar p{
     background-color: rgb(0, 81, 255);
     border-radius: 10px;
 }
+
 .inputs-adicionar-conteudo input{
     width: 100%;
     padding: 3px;
@@ -939,6 +935,8 @@ button.criar p{
 }
 .inputs-adicionar-conteudo textarea{
     width: 100%;
+    height: 100%;
+    max-height: 300px;
     padding: 3px;
     border: none;
     border-radius: 5px;
@@ -953,9 +951,11 @@ button.adicionar{
     border-radius: 5px;
     cursor: pointer;
     background-color: rgb(6, 238, 255);
-    margin: 0 auto;
+    margin: 0 10px;
     margin-top: 20px;
-
+}
+.buttons-conteudo{
+    display: flex;
 }
 
 .tela-conteudo{
@@ -990,7 +990,7 @@ button.adicionar{
     height: 100%;
     background-color: #212121;
     word-wrap: break-word;
-    padding: 20px 25%;
+    padding: 20px 20%;
     overflow-y: scroll;
     display: none;
 }
@@ -1046,6 +1046,26 @@ button.perguntas{
     overflow-y: scroll;
     position: relative;
     left: -10%;
+}
+#pergunta_duvida{
+    width: 90%;
+    max-width : 400px;
+}
+#resposta_duvida{
+    width: 90%;
+    max-width : 400px;
+}
+.confirmar{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.confirmar-alert{
+    width: 50%;
+    max-width: 130px;
+    margin: 10px;
+    font-size: 12px;
+    padding: 5px 7px !important;
 }
 .perguntas-button{
     display: flex;
@@ -1179,7 +1199,7 @@ button.voltar-redes{
 
 
 /* ---------MEDIAS QUERYS-------- */
-@media screen and (max-width : 1024px){
+@media screen and (max-width : 1300px){
     .main-home{
         width: 100%;
         height: 60%;
@@ -1193,7 +1213,7 @@ button.voltar-redes{
         top: auto;
         right: 50%;
         bottom: 15%;
-        transform: translateX(+50%);
+        transform: translateX(+23%);
     }
     .opcoes-perfil{ 
         border-top-right-radius: 5px;  
@@ -1201,7 +1221,84 @@ button.voltar-redes{
     }
 
 }
+@media screen and (max-width : 1024px){
+    .box-home {
+        width: 140px;
+        height: 204px;
+    }
+    button.texto-box-home{
+        font-size: 12px;
+    }
+
+}
+@media screen and (max-height : 600px){
+    .box-form-cadastro{
+        height: 90%;
+    }
+
+}
+@media screen and (max-height : 500px){
+    .box-home {
+        width: 130px;
+        height: 194px;
+    }
+    button.texto-box-home{
+        font-size: 10px;
+    }
+    .creditos{
+        display: none;
+    }
+    .login{
+        bottom: 20px;
+    }
+    .box-form-login{
+        height: 90%;
+    }
+    .titulo{
+        position: absolute;
+        top: 2%;
+        font-size: 15px;
+    }
+    .box-cadastro{
+        height: 90%;
+    }
+
+}
+@media screen and (max-height : 400px){
+    .box-home {
+        width: 130px;
+        height: 74px;
+        margin: 40px;
+    }
+    button.texto-box-home{
+        width: 100%; 
+        height: 100%;
+        padding: 2px;
+        border-radius: 0;
+        font-size: 12px;
+    }
+    button.imagem-box-home{
+        display: none;
+    }
+
+
+}
 @media screen and (max-width : 768px){
+    .box-home {
+        width: 130px;
+        height: 74px;
+        margin: 40px;
+    }
+    button.texto-box-home{
+        width: 100%; 
+        height: 100%;
+        padding: 2px;
+        border-radius: 0;
+        font-size: 12px;
+    }
+    button.imagem-box-home{
+        display: none;
+    }
     .main-home{
         display: none;
     }
@@ -1212,11 +1309,8 @@ button.voltar-redes{
         display: flex;
     
     }
-    button.texto-box-home{
-        width: 210px;   
-    }
     .box-form-login{
-        width: 60%;
+        width: 70%;
     }
     .box-login{
         width: 90%;
@@ -1224,6 +1318,10 @@ button.voltar-redes{
     }
     .box-login input{
         width: 80%;       
+    }
+    .box-form-cadastro{
+        width: 70%;
+        padding: 1em 1em;
     }
     .box-cadastro{
         width: 90%;
@@ -1242,24 +1340,15 @@ button.voltar-redes{
 }
 
 @media screen and (max-width : 500px){
-    .main-home-tablet{
-        display: none;
-    
-    }
     .login{
-        bottom: 5%;
-    }
-    .imagem-mobile{
-        width: 100%;
-        margin: 0 auto;
-        aspect-ratio: 16/5;
-        background-color: gray;
-    }
-    .main-home-mobile{
-        display:block;
+        bottom: 10%;
     }
     .box-form-login{
-        width: 80%;
+        width: 90%;
+    }
+    .box-form-cadastro {
+        padding: 1em 0.5em;
+        width: 95%;
     }
     .box-cadastro{
         width: 90%;
@@ -1271,6 +1360,7 @@ button.voltar-redes{
     }
     .container-perfil{
         flex-direction: column-reverse;
+        transform: translateX(+50%);
     }
     .opcoes-perfil{
         margin: 0 auto;
@@ -1284,7 +1374,7 @@ button.voltar-redes{
     
     }
     .header-materias{
-        height: 7%;
+        height: 20%;
     }
     .main-materias{
         height: 86%;
@@ -1292,6 +1382,67 @@ button.voltar-redes{
     .background-redes{
         padding: 20px 25%;
 
+    }
+    .button_d {
+        font-size: 12px;
+        max-width: 100%;
+        min-width: 120px;
+        padding: 3px;
+    }
+    .box-home {
+        width: 120px;
+        height: 64px;
+        margin: 50px 20px;
+    }
+    button.texto-box-home{
+        width: 100%; 
+        height: 100%;
+        padding: 2px;
+        border-radius: 0;
+        font-size: 12px;
+    }
+    .container-duvidas{
+        width: 90%;
+    }
+    .titulo{
+        position: absolute;
+        top: 4%;
+        font-size: 15px;
+    }
+    .situacao {
+        width: 100%;
+        justify-content: space-around;   
+        
+    }
+    .box-situacao{
+        width: auto; 
+    }
+
+}
+@media screen and (max-width : 400px){
+    .button_d {
+        font-size: 10px;
+        max-width: 100%;
+        min-width: 100px;
+        padding: 3px;
+    }
+    .box-home {
+        width: 100px;
+        height: 44px;
+        margin: 60px 10px;
+    }
+    button.texto-box-home{
+        width: 100%; 
+        height: 100%;
+        padding: 0px;
+        border-radius: 0;
+        font-size: 10px;
+    }
+    .box-form-login {
+        padding: 1em 0.5em;
+    }
+    .inputs-login input:is([type="text"],[type="email"],[type="password"]){
+        width: 100%;
     }
 
 }

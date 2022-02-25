@@ -24,6 +24,9 @@ var alert_verificado = document.querySelector('img.alert-verificado');
 var titulo_alert = document.querySelector('h2.titulo-alert');
 var background_conteudo_materias = document.querySelector('div.background-conteudo-materias');
 var tela_conteudo = document.querySelector('div.tela-conteudo');
+var titulo = document.querySelector('input#titulo');
+var sinopse = document.querySelector('input#sinopse');
+var cont = document.querySelector('textarea#cont');
 
 /* -----------------------------ARRAYS------------------------------- */
 
@@ -934,8 +937,9 @@ function voltar_conteudo(){
     document.querySelector('div.adicionar-conteudo').style.display = 'none';
     document.querySelector('div.tela-conteudo').style.display = 'none';
     document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-    document.querySelector('button.criars').style.display = 'block';
-
+    titulo.value = '';
+    sinopse.value = '';
+    cont.value = '';
     if(sit[1] == 1){
         document.querySelector('button.criars').style.display = 'block';
         
@@ -944,9 +948,6 @@ function voltar_conteudo(){
     }
 }
 function adicionar(){
-    let titulo = document.querySelector('input#titulo');
-    let sinopse = document.querySelector('input#sinopse');
-    let cont = document.querySelector('textarea#cont');
     let matSelec = '';
     
 
@@ -1340,9 +1341,6 @@ function adicionar(){
          
     }
     voltar_conteudo()
-    titulo.value = '';
-    sinopse.value = '';
-    cont.value = '';
 }
 
 

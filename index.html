@@ -144,41 +144,7 @@
             </div><!--main-home-tablet-->
     
     
-            <!-- -------------------mobile-------------------- -->
-    
-            <!--conteudo da pagina principal responsiva destinada ao mobile-->
-    
-            <div class="main-home-mobile">
-    
-                <div class="imagem-mobile"></div><!--imagem-mobile-->
-    
-                <div class="box-mobile imagem-professor">                    
-                    <button class="texto-box-home" onclick="professor()">
-                        PROFESSOR(A)
-                    </button><!--texto-box-home-->
-                </div><!--box-mobile imagem-professor-->
-    
-                <div class="box-mobile imagem-aluno" >
-                    <button class="texto-box-home" onclick="aluno()">
-                        ALUNO(A)
-                    </button><!--texto-box-home-->
-                </div><!--box-home imagem-aluno-->
-    
-                <div class="box-mobile imagem-duvidas">
-                    <button class="texto-box-home" onclick="duvidas()">
-                        DÚVIDAS 
-                    </button><!--texto-box-home-->
-                </div><!--box-home imagem-duvidas-->
-    
-                <div class="box-mobile imagem-redes">
-                    <button class="texto-box-home" onclick="redes()">
-                        REDES SOCIAIS
-                    </button><!--texto-box-home-->  
-                </div><!--box-home imagem-redes-->
-    
-            </div><!--main-home-mobile-->
-    
-            <!-- ------------------------------------------------ -->
+           
     
             <div class="login">
                 <button class="logar button_d" onclick="logar()"><span>LOGIN</span></button>
@@ -292,17 +258,20 @@
     
             <button class="voltar-materias" onclick="voltar_materias()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
               
-            <button class="criar criars" onclick="criar()"><p>+</p></button>
+            <button class="criar criars" onclick="criar()"><p>Adicionar</p></button>
     
             <div class="adicionar-conteudo">
                 <div class="inputs-adicionar-conteudo">
                     <input type="text" id="titulo" placeholder="Titulo" maxlength="20">
                     <input type="text" id="sinopse" maxlength="80" placeholder="Sinopse">
                     <textarea name="cont" id="cont" cols="45" rows="25" placeholder="Digite somente o conteúdo"></textarea>
-                    <button class="adicionar" onclick="adicionar()">Adicionar</button>
+                    <div class="buttons-conteudo">
+                        <button class="adicionar" onclick="voltar_conteudo()" style="background-color: gray;"><p>Cancelar</p></button>
+                        <button class="adicionar" onclick="adicionar()">Adicionar</button>
+                    </div>
                 </div><!--inputs-adicionar-conteudo--> 
 
-                <button class="criar" onclick="voltar_conteudo()" style="background-color: red;"><p>-</p></button>
+                
 
             </div><!--adicionar-conteudo-->
         </div><!--background-conteudo-materia-->   
