@@ -23,8 +23,6 @@ body, html{
     scrollbar-color: rgb(65, 63, 63) rgb(65, 63, 63) !important;
     scrollbar-width: none !important;
 }
-
-
 .fundo-tela-de-alert{
     width: 100%;
     height: 100%;   
@@ -71,17 +69,12 @@ button.confirmar-alert{
     margin-bottom: 20px;
 }
 
-
-
-
 /* --------------HOME------------ */
-
 .background-home{
     width: 100%;
     height: 100%;
     background-color: #212121;
     word-wrap: break-word;
-    /* display: none; */
 }
 .header-home{
     width: 100%;
@@ -95,10 +88,6 @@ button.confirmar-alert{
     color: transparent;
     font-weight: bold;
 }
-
-
-
-
 .main-home{
     width: 70%;
     height: 60%;
@@ -107,8 +96,6 @@ button.confirmar-alert{
     align-items: center;
     margin: 0px auto;
 }
-
-
 .box-home {
     --color-1: rgb(178, 12, 211);
     --color-2: rgb(5, 252, 248);
@@ -121,14 +108,12 @@ button.confirmar-alert{
                  15px 10px var(--color-2);
     transition: box-shadow 0.25s ease-in-out,
                  transform 0.25s ease-in-out;
-}
-   
+} 
 .box-home:hover {
     box-shadow: -10.275px -10.275px var(--color-1),
                  15.4px 10.275px var(--color-2);
     transform: scale(1.025);
-}
-   
+}  
 button.imagem-box-home{
     width: 100%;
     height: 80%;
@@ -169,10 +154,9 @@ button.texto-box-home{
     font-size: 15px;
     font-weight: bold;
 }
-
+/* --------------HOME------------ */
 
 /* --------------PERFIL------------ */
-
 .container-perfil{
     width: 200px;
     display: flex;
@@ -181,8 +165,6 @@ button.texto-box-home{
     top: 35px;
     right: 45px;
 }
-
-
 .perfil{
     display: flex;
     flex-direction: column;
@@ -206,7 +188,6 @@ button.nome-perfil{
     border: none;
     cursor: pointer;
     color: white;
-
 }
 .opcoes-perfil{
     width: 120px;
@@ -219,8 +200,7 @@ button.nome-perfil{
     position: relative;
     top: 20px;
     right: -20px;
-    display: none;
-    
+    display: none; 
 }
 .opcoes-perfil button{
     padding: 1px 10px;
@@ -370,12 +350,9 @@ button.voltar-perfil{
     cursor: pointer;
     transition: all .3s;
 }
-
-.button_d:active,
-.button_d:hover {
+.button_d:active,.button_d:hover {
     outline: 0;
 }
-
 .button_d span {
     background-color: rgb(5, 6, 45);
     padding: 8px 16px;
@@ -384,15 +361,12 @@ button.voltar-perfil{
     height: 100%;
     transition: 300ms;
 }
-
 .button_d:hover span {
     background: none;
 }
-
 .button_d:active {
     transform: scale(0.9);
 }
-
 .creditos{
     width: 100%;
     display: flex;
@@ -404,7 +378,6 @@ button.voltar-perfil{
 }
 /* -----LOGIN E CREDITTOS HOME------ */
 
-
 /* ---------HOME TABLET---------- */
 .main-home-tablet{
     width: 100%;
@@ -414,16 +387,13 @@ button.voltar-perfil{
     align-items: center;
     margin: 0px auto;
     display: none;
-
 }
 .container-tablet1{
     padding: 5%;
-
 }
 .container-tablet2{
     padding: 5%;
 }
-
 /* ---------HOME TABLET---------- */
 
 /* ---------HOME MOBILE---------- */
@@ -432,7 +402,6 @@ button.voltar-perfil{
     margin: 0px auto;
     display:none;
 }
-
 .imagem-mobile{
     width: 100%;
     margin: 0 auto;
@@ -440,9 +409,7 @@ button.voltar-perfil{
     background-image: url('../imagens/img-mobile.png');
     background-position: center;
     background-size: 99% 99%;
-
 }
-
 .box-mobile{
     width: 100%;
     display: flex;
@@ -453,7 +420,6 @@ button.voltar-perfil{
 /* ---------HOME MOBILE---------- */
 
 /* ---------TELA DE LOGIN---------- */
-
 .tela-de-login{
     width: 100%;
     height: 100%;
@@ -463,8 +429,7 @@ button.voltar-perfil{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
-    
+    display: none;  
 }
 .box-form-login {
     width: 50%;
@@ -480,8 +445,6 @@ button.voltar-perfil{
     border-radius: 15px;
     border: 2px solid blue;
 }
-
-
 .box-login{  
     width: 90%;
     height: 80%;
@@ -532,7 +495,6 @@ button.voltar{
 .box-login ::-webkit-input-placeholder{
     color:rgba(255, 255, 255, 0.733);   
 }
-
 input#enviar{
     width: auto;
     border: none;
@@ -574,7 +536,6 @@ button.cadastre-se{
     justify-content: center;
     align-items: center;
     display: none;
-    
 }
 .box-form-cadastro {
     width: 50%;
@@ -590,8 +551,6 @@ button.cadastre-se{
     border-radius: 15px;
     border: 2px solid blue;
 }
-
-
 p.ja-possui-conta{
     width: 100%;
     text-align: center;
@@ -600,8 +559,7 @@ p.ja-possui-conta{
     left: 0%;
 }
 .ja-possui-conta button{
-    padding-right: 0;
-    
+    padding-right: 0;  
 }
 .box-cadastro{
     width: 90%;
@@ -613,7 +571,6 @@ p.ja-possui-conta{
     position: relative;
     margin: 0 auto;
 }
-
 .box-cadastro input{
     width: 80%;
     border: none;
@@ -639,8 +596,7 @@ p.ja-possui-conta{
     max-width: 200px;
     display: flex;
     margin: 0 auto;
-    margin-top: 10px;
-    
+    margin-top: 10px;  
 }
 .box-situacao{
     width: 100px;
@@ -651,7 +607,6 @@ p.ja-possui-conta{
     width: 13px;
     height: 13px;
 }
-
 input#enviar-cadastro{
     width: auto;
     border: none;
@@ -668,14 +623,13 @@ input#enviar-cadastro{
 }
 /* ---------TELA DE CADASTRO-------- */
 
-/* ---------materias-------- */
+/* ---------matérias-------- */
 .background-materia{
     width: 100%;
     height: 100%;
     background-color: #212121;
     word-wrap: break-word;
-    display: none;
-    
+    display: none;  
 }
 .voltar-materias img{
     width: 30px;
@@ -714,7 +668,6 @@ button.voltar-materias{
     flex-wrap: wrap;
 
 }
-
 button.container-materia{
     width: 110px;
     aspect-ratio: 9/12;
@@ -744,7 +697,6 @@ button.container-materia:hover{
     background-position: center;
     background-size: cover;
 }
-
 .materia-portugues{
     background-image: url('../imagens/portugues.jpg');
 }.materia-matematica{
@@ -786,8 +738,6 @@ button.container-materia:hover{
 }.materia-enem{
     background-image: url('../imagens/enem.jpg');
 }
-
-
 .footer-materias{
     width: 100%;
     height: 7%;
@@ -796,10 +746,9 @@ button.container-materia:hover{
     justify-content: center;
     color: white;
 }
-
+/* ---------matérias-------- */
 
 /* ---------conteudo materia--------- */
-
 .background-conteudo-materias{
     width: 100%;
     height: 100%;
@@ -829,7 +778,6 @@ h2.titulo-background-conteudo-materias{
     flex-wrap: wrap;
     overflow-y:scroll;   
 }
-
 .card-conteudo{
     width: 130px;
     height: 160px;
@@ -885,11 +833,10 @@ button.container-conteudo-materia{
     font-size: 13px;
     font-size: 10px;
     color: rgb(75, 75, 75);
-
 }
+/* ---------conteudo materia--------- */
 
 /* -----adicionar conteudo------ */
-
 button.criar{
     padding: 3px 17px;
     margin: 15px 10px;
@@ -927,7 +874,6 @@ button.criar{
     background-color: rgb(0, 81, 255);
     border-radius: 10px;
 }
-
 .inputs-adicionar-conteudo input{
     width: 100%;
     padding: 3px;
@@ -959,7 +905,6 @@ button.adicionar{
 .buttons-conteudo{
     display: flex;
 }
-
 .tela-conteudo{
     width: 100%;
     height: 100%;
@@ -986,7 +931,6 @@ button.adicionar{
     font-size: clamp(0.5em, 0.5em + 1vw, 1em);
     color: rgb(182, 182, 182);
 }
-
 /* -----adicionar conteudo------ */
 
 /* -----tela de duvidas------ */
@@ -1028,7 +972,6 @@ button.adicionar{
     transform: scale(0.97);
     transition: 0.1s;
 }
-
 button.perguntas{
     width: 100%;
     padding: 15px;
@@ -1114,7 +1057,6 @@ button.perguntas{
     transform: scale(0.9);
     transition: 0.3s;
 }
-
 .back-alert-duvidas{
     width: 100%;
     height: 100%;
@@ -1141,7 +1083,6 @@ button.perguntas{
     text-align: center;
     z-index: 999;
 }
-
 /* -----tela de duvidas------ */
 
 /* -----tela de redes------ */
@@ -1174,9 +1115,7 @@ button.perguntas{
 }
 .background-redes a{
     text-decoration: none;
-
 }
-
 .background-redes button{
     display: flex;
     align-items: center;
@@ -1188,7 +1127,6 @@ button.perguntas{
     margin: 15px;
     cursor: pointer;
 }
-
 .voltar-redes img{
     width: 30px;
 }
@@ -1201,7 +1139,7 @@ button.voltar-redes{
     left: 5px;top: 7px;
     z-index: 1;
 }
-
+/* -----tela de redes------ */
 
 /* ---------MEDIAS QUERYS-------- */
 @media screen and (max-width : 1300px){
@@ -1224,7 +1162,6 @@ button.voltar-redes{
         border-top-right-radius: 5px;  
         border-bottom-right-radius: 0px; 
     }
-
 }
 @media screen and (max-width : 1024px){
     .box-home {
@@ -1234,59 +1171,6 @@ button.voltar-redes{
     button.texto-box-home{
         font-size: 12px;
     }
-
-}
-@media screen and (max-height : 600px){
-    .box-form-cadastro{
-        height: 90%;
-    }
-
-}
-@media screen and (max-height : 500px){
-    .box-home {
-        width: 130px;
-        height: 194px;
-    }
-    button.texto-box-home{
-        font-size: 10px;
-    }
-    .creditos{
-        display: none;
-    }
-    .login{
-        bottom: 20px;
-    }
-    .box-form-login{
-        height: 90%;
-    }
-    .titulo{
-        position: absolute;
-        top: 2%;
-        font-size: 15px;
-    }
-    .box-cadastro{
-        height: 90%;
-    }
-
-}
-@media screen and (max-height : 400px){
-    .box-home {
-        width: 130px;
-        height: 74px;
-        margin: 40px;
-    }
-    button.texto-box-home{
-        width: 100%; 
-        height: 100%;
-        padding: 2px;
-        border-radius: 0;
-        font-size: 12px;
-    }
-    button.imagem-box-home{
-        display: none;
-    }
-
-
 }
 @media screen and (max-width : 768px){
     .box-home {
@@ -1302,24 +1186,20 @@ button.voltar-redes{
         font-size: 12px;
     }
     button.imagem-box-home{
+        width: 120px;
         display: none;
     }
     .main-home{
         display: none;
     }
-    button.imagem-box-home{
-        width: 120px;
-    }
     .main-home-tablet{
         display: flex;
-    
     }
     .box-form-login{
         width: 70%;
     }
     .box-login{
         width: 90%;
-
     }
     .box-login input{
         width: 80%;       
@@ -1338,9 +1218,7 @@ button.voltar-redes{
         width: 13px;
         height: 13px;
     }
-
 }
-
 @media screen and (max-width : 500px){
     .login{
         bottom: 10%;
@@ -1355,7 +1233,6 @@ button.voltar-redes{
     .box-cadastro{
         width: 90%;
     }
-
     button.voltar{
         position: absolute;
         left: 5px;top: 30px;
@@ -1373,7 +1250,6 @@ button.voltar-redes{
     }
     button.container-materia{
         margin: 5px;
-    
     }
     .header-materias{
         height: 20%;
@@ -1383,7 +1259,6 @@ button.voltar-redes{
     }
     .background-redes{
         padding: 20px 25%;
-
     }
     .button_d {
         font-size: 12px;
@@ -1413,13 +1288,11 @@ button.voltar-redes{
     }
     .situacao {
         width: 100%;
-        justify-content: space-around;   
-        
+        justify-content: space-around;     
     }
     .box-situacao{
         width: auto; 
     }
-
 }
 @media screen and (max-width : 400px){
     .button_d {
@@ -1446,5 +1319,52 @@ button.voltar-redes{
     .inputs-login input:is([type="text"],[type="email"],[type="password"]){
         width: 100%;
     }
-
+}
+@media screen and (max-height : 600px){
+    .box-form-cadastro{
+        height: 90%;
+    }
+}
+@media screen and (max-height : 500px){
+    .box-home {
+        width: 130px;
+        height: 194px;
+    }
+    button.texto-box-home{
+        font-size: 10px;
+    }
+    .creditos{
+        display: none;
+    }
+    .login{
+        bottom: 20px;
+    }
+    .box-form-login{
+        height: 90%;
+    }
+    .titulo{
+        position: absolute;
+        top: 2%;
+        font-size: 15px;
+    }
+    .box-cadastro{
+        height: 90%;
+    }
+}
+@media screen and (max-height : 400px){
+    .box-home {
+        width: 130px;
+        height: 74px;
+        margin: 40px;
+    }
+    button.texto-box-home{
+        width: 100%; 
+        height: 100%;
+        padding: 2px;
+        border-radius: 0;
+        font-size: 12px;
+    }
+    button.imagem-box-home{
+        display: none;
+    }
 }

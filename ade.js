@@ -38,6 +38,10 @@ var sit = []; //  verifica se é aluno ou professor [0] e se entrou na area de a
 var login = []; // verifica se o individuo esta logado [0]
 var materias = []; // identificar qual a materia
 var verificar_selecionado = [0] // verificar se esta selecionado aluno ou professor na parte do cadastro
+var texto = [];
+var resp = [];
+var perguntas = [];
+var quant = [resp.length, 0];
 /* -----------------------------arrays materias------------------------------- */
 
 // variaveis de titulo, sinopse e conteúdo das matérias
@@ -75,8 +79,6 @@ function logar(){
     password_cadastro.value = '';
     password_confirmar.value = '';
     name_id.value = '';
-    // login_email.value = '';
-    // login_password.value = '';
 }
 function cadastrar(){
     background.style.display = 'none';
@@ -85,10 +87,6 @@ function cadastrar(){
     login_email.value = '';
     login_password.value = '';
     login_email.focus();
-    // email_cadastro.value = '';
-    // password_cadastro.value = '';
-    // password_confirmar.value = '';
-    // name_id.value = '';
 }
 function voltar(){
     background.style.display = 'block';
@@ -161,7 +159,6 @@ function enviar_login(){
 /* -------REALIZAR LOGIN--------- */
 
 /* -------REALIZAR CADASTRO--------- */
-
 function enviar_cadastro() {
     let tipo = verificartipo() // verifica se é aluno ou professor
     if(email_cadastro.value.length == 0 || password_cadastro.value.length == 0 || password_confirmar.value.length == 0 || name_id.value.length == 0){ //se estiver faltando algum dado de cadastro, verifica qual é e mostra pro usuário
@@ -252,9 +249,9 @@ function enviar_cadastro() {
             }
         }
     }
-
 }
 /* -------REALIZAR CADASTRO--------- */
+
 
 /* -------CONFIRMAR SE EXISTE CADASTRO DE MESTRE, ALUNO OU PROFESSOR--------- */
 
@@ -292,7 +289,6 @@ function confirmar_login_aluno(){
 
 /* -------VERIFICAR SE É MESTRE, ALUNO OU PROFESSOR--------- */
 function verificartipo(){ // verifica os inputs radios para saber se é aluno ou professor
-
     var botoes = document.getElementsByName("alunoprofessor");
     var i = 0
     for (i in botoes) {
@@ -354,21 +350,10 @@ function redes(){
 
 
 
-
-
-
-
-var texto = [];
-var resp = [];
-var perguntas = [];
-
-var quant = [resp.length, 0];
-
 for(let a = 0; a < quant[0]; a++){
     document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
 }
 load1()
-
 function criar_perguntas(){
     document.querySelector('.back-alert-duvidas').style.display = 'flex';
     document.querySelector('.alert-pergunta').style.display = 'inline-block';
@@ -400,7 +385,6 @@ function cancelar_alert_duvida(){
     document.querySelector('#resposta_duvida').style.border = '1px solid gray';
     document.querySelector('.pergunta-de-duvida').style.display = 'none';
 }
-
 function confirmar_alert_duvida_resposta(){
     if(document.querySelector('#resposta_duvida').value.length <= 0){
         document.querySelector('#resposta_duvida').style.border = '2px solid red';
@@ -432,18 +416,12 @@ function responder_perguntas(){
     document.querySelector('.alert-pergunta').style.display = 'none';
     document.querySelector('.alert-resposta').style.display = 'inline-block';
 }
-
-
 function load(){
     for(let a = quant[0] - 1; a < quant[0]; a++){
         document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
     }
-
-    
 }
-
 function load1(){
-
     let cont_duvidas = document.querySelectorAll('.container-duvidas');
     let perguntas = document.querySelectorAll('.perguntas');
     let respostas = document.querySelectorAll('.respostas');
@@ -459,9 +437,6 @@ function load1(){
     }
 
 }
-
-
-
 /* -------SEÇÃO HOME - PROFESSOR, ALUNO, DUVIDAS FREQUENTES OU REDES SOCIAIS--------- */
 
 //-----------------------------PERFIL-------------------------------------
@@ -469,19 +444,16 @@ function load1(){
 function perfil(){
     document.querySelector('div.opcoes-perfil').style.display = 'flex';
 }
-
 function sair_perfil(){
     dados[0] = '';
     dados[1] = '';
     login[0] = '';
     sit[0] = '';
-
     document.querySelector('div.login').style.display = 'flex';
     document.querySelector('div.opcoes-perfil').style.display = 'none';
     document.querySelector('div.perfil').style.display = 'none';
     document.querySelector('.responder_pergunta').style.display = 'none';
 }
-
 function senha_perfil(){
     alterar_senha.style.display = 'flex';
     alert_senha.style.display = 'flex';
@@ -495,9 +467,7 @@ function confirmar_alert(){
     alert_senha.style.display = 'none';
     box_alterar.style.display = 'flex';
 }
-
 function confirmar_alterar(){
-
     if(confirmar_para_alterar.value.length == 0 || nova_senha.value.length == 0 || confirmar_nova_senha.value.length == 0){
 
         if(confirmar_para_alterar.value.length == 0){confirmar_para_alterar.style.background = "#fa7e7e65"}else{confirmar_para_alterar.style.background = "transparent";}
@@ -537,7 +507,6 @@ function confirmar_alterar(){
                         texto_alert.innerText = `Sua senha foi alterada com sucesso!`;
 
                     }
-
                 }else{
                     tela_alert.style.display = 'block';
                     texto_alert.innerText = `As senhas fornecidas estão incorretas`;
@@ -575,7 +544,6 @@ function confirmar_alterar(){
                         alert_verificado.style.display = 'block';
                         titulo_alert.innerText = 'PARABÉNS!';
                         texto_alert.innerText = `Sua senha foi alterada com sucesso!`;
-
                     }
                 }else{
                     tela_alert.style.display = 'block';
@@ -586,13 +554,7 @@ function confirmar_alterar(){
             }
         }
     }
-
-
-
 }
-
-
-
 
 //-----------------------------materias-------------------------------------
 
@@ -602,8 +564,6 @@ var tituloMateria = '';
 var titulo_tela = document.querySelector('h2.titulo-tela-conteudo');
 var sinopse_tela = document.querySelector('h4.sinopse-tela-conteudo');
 var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
-
-
 
 for(let l = 0; l < cont_materia.length; l++){
     cont_materia[l].addEventListener('click', function(){
@@ -915,7 +875,6 @@ for(let l = 0; l < cont_materia.length; l++){
         document.querySelector('h2.titulo-background-conteudo-materias').innerText = tituloMateria;
     })
 }
-
 function voltar_materias(){
     document.querySelector('div.background-materia').style.display = 'block';
     document.querySelector('div.background-conteudo-materias').style.display = 'none';
@@ -932,7 +891,6 @@ function criar(){
     document.querySelector('div.adicionar-conteudo').style.display = 'flex';
     document.querySelector('button.criars').style.display = 'none';
 }
-
 function voltar_conteudo(){
     document.querySelector('div.adicionar-conteudo').style.display = 'none';
     document.querySelector('div.tela-conteudo').style.display = 'none';
@@ -949,8 +907,6 @@ function voltar_conteudo(){
 }
 function adicionar(){
     let matSelec = '';
-    
-
 
     switch (materias[0]){
         case 1: 
@@ -1337,10 +1293,7 @@ function adicionar(){
                     conteudo_tela.innerText = contenem[i];
                 })
             }
-            break;  
-         
+            break;    
     }
     voltar_conteudo()
 }
-
-
