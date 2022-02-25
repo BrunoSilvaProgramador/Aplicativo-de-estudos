@@ -28,6 +28,7 @@ var titulo = document.querySelector('input#titulo');
 var sinopse = document.querySelector('input#sinopse');
 var cont = document.querySelector('textarea#cont');
 
+
 /* -----------------------------ARRAYS------------------------------- */
 
 var dados_login_professor = []; // armazena os dados de login de professor, email[0] senha[1]  tipo[2] id name[3]
