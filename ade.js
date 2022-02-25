@@ -340,6 +340,7 @@ function duvidas(){
     if(sit[0] == 'mestre'){
         if(quant[1] > quant[0]){
             document.querySelector('.responder_pergunta').style.display = 'block';
+            document.querySelector('.criar_pergunta').style.display = 'none';
         }
     }
 }
@@ -380,6 +381,7 @@ function confirmar_alert_duvida(){
         if(sit[0] == 'mestre'){
             if(quant[1] > quant[0]){
                 document.querySelector('.responder_pergunta').style.display = 'block';
+                document.querySelector('.criar_pergunta').style.display = 'none';
             }
         }
         document.querySelector('#pergunta_duvida').value = '';
@@ -406,6 +408,7 @@ function confirmar_alert_duvida_resposta(){
         quant[0] = resp.length;
         if(quant[1] <= quant[0]){
             document.querySelector('.responder_pergunta').style.display = 'none';
+            document.querySelector('.criar_pergunta').style.display = 'block';
         }
         load();
         load1();
@@ -914,7 +917,7 @@ function voltar_materias(){
     document.querySelector('div.background-materia').style.display = 'block';
     document.querySelector('div.background-conteudo-materias').style.display = 'none';
     materias[0] = 0;
-    let materiaGeral = document.querySelectorAll('.container-conteudo-materia');
+    let materiaGeral = document.querySelectorAll('.card-conteudo');
     for(let i=0; i < materiaGeral.length; i++){
         materiaGeral[i].style.display = 'none';
     }
@@ -1070,7 +1073,7 @@ function adicionar(){
             matSelec = 'materia_enem';
             break;
     }
-    document.querySelector(`.background-conteudo-materia`).innerHTML += `<button class="container-conteudo-materia ${matSelec}"><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p>${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button>`;
+    document.querySelector(`.background-conteudo-materia`).innerHTML += `<div class="card-conteudo ${matSelec}"><button class="container-conteudo-materia "><div class="imagem-conteudo"></div><div class="texto-conteudo"><div class="titulo-texto-conteudo"><p>${titulo.value}</p></div><div class="sinopse-texto-conteudo"><p>${sinopse.value}</p></div></div></button></div>`;
 
     var matPor = document.querySelectorAll('.materia_portugues');
     var matMat = document.querySelectorAll('.materia_matematica');
