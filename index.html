@@ -9,9 +9,9 @@
     </head>
     <body>
         
-        <div class="back-tela-funcionamento">
+        <article class="back-tela-funcionamento">
             <div class="container-tela">
-                <div class="tela-funcionamento">
+                <section class="tela-funcionamento">
                     <h2>MANUAL DE USO</h2><br>
                     <h4>Opções habilitadas para cada tipo de usuário:</h4><br>
                     <h3>Administrador:</h3>
@@ -42,14 +42,14 @@
                     <h5>Este manual estará disponível novamente na área superior direita da seção de dúvidas!</h5>
 
                     <button class="button_d button-manual" onclick="sair_manual()">OK</button>
-                </div><!--tela-funcionamento-->
+                </section><!--tela-funcionamento-->
             </div><!--container-tela-->
-        </div><!--back-tela-funcionamento-->
+        </article><!--back-tela-funcionamento-->
 
 
         <!--Tela de alert, esta é uma alternativa ao alert do js, utitlizada simplesmente como uma personalização-->
     
-        <div class="fundo-tela-de-alert">
+        <article class="fundo-tela-de-alert">
             <div class="tela-de-alert">
                 <img src="imagens/atencao.png" alt="" class="alert-atencao">
                 <img src="imagens/verificado.png" alt="" class="alert-verificado">
@@ -57,16 +57,16 @@
                 <p class="texto-alert">VOCE ESTA ERRADO</p>
                 <button class="confirmar-alert" onclick="alert()">OK</button>
             </div><!--tela-de-alert-->
-        </div><!--fundo-tela-de-alert-->
+        </article><!--fundo-tela-de-alert-->
     
     
         <!--background-home é a tela principal com todas as suas funções-->
     
-        <div class="background-home">
+        <article class="background-home">
 
-            <div class="header-home"><h2>AULAS GRATUITAS DE ENSINO</h2></div><!--header-home-->
+            <header class="header-home"><h2>AULAS GRATUITAS DE ENSINO</h2></header><!--header-home-->
 
-            <div class="container-perfil">
+            <section class="container-perfil">
                 <div class="perfil">
                     <button class="imagem-perfil" onclick="perfil()"></button>
                     <button class="nome-perfil" onclick="perfil()">Bruno Rafael</button>
@@ -76,9 +76,9 @@
                     <button class="dados_perfil" onclick="senha_perfil()">Alterar senha</button>
                     <button class="voltar-perfil" onclick="voltar()"><img src="imagens/x.png" alt=""></button> <!--BOTAO DE VOLTAR-->
                 </div><!--opcoes-perfil-->
-            </div><!--container-perfil-->
+            </section><!--container-perfil-->
     
-            <div class="alterar-senha"> <!--box para alteração da senha de login-->
+            <section class="alterar-senha"> <!--box para alteração da senha de login-->
                 <div class="alert-senha"> <!--alert personalizado exclusivamente para a alteração da senha-->
                     <img src="imagens/atencao.png" alt="">
                     <h2>REALMENTE DESEJA ALTERAR SUA SENHA? </h2>
@@ -98,13 +98,13 @@
                         <input type="button" onclick="confirmar_alterar();" value="Confirmar">
                     </div><!--main-alterar-senha-->
                 </div><!--box-alterar-senha-->
-            </div><!--alterar-senha-->
+            </section><!--alterar-senha-->
     
             <!-- -------------------desktop-------------------- -->
             
             <!--conteudo da pagina principal responsiva destinada ao desktop-->
     
-            <div class="main-home">
+            <section class="main-home">
                 <div class="box-home ">
                     <button class="imagem-box-home imagem-professor" onclick="professor()"></button><!--imagem-box-home-->
                     <button class="texto-box-home" onclick="professor()">
@@ -132,13 +132,13 @@
                         REDES SOCIAIS
                     </button><!--texto-box-home-->  
                 </div><!--box-home imagem-redes-->
-            </div><!--main-home-->
+            </section><!--main-home-->
     
             <!-- -------------------tablet-------------------- -->
     
             <!--conteudo da pagina principal responsiva destinada ao tablet ou tela medianas-->
     
-            <div class="main-home-tablet">
+            <section class="main-home-tablet">
                 <div class="container-tablet1">
                     <div class="box-home ">
                         <button class="imagem-box-home imagem-professor" onclick="professor()"></button><!--imagem-box-home-->
@@ -170,21 +170,22 @@
                         </button><!--texto-box-home-->  
                     </div><!--box-home imagem-redes-->
                 </div><!--container-tablet2-->
-            </div><!--main-home-tablet-->
+            </section><!--main-home-tablet-->
 
             <div class="login">
                 <button class="logar button_d" onclick="logar()"><span>LOGIN</span></button>
                 <button class="cadastrar button_d" onclick="cadastrar()"><span>CADASTRAR</span></button>
             </div><!--login-->
     
-            <div class="creditos">Desenvolvido por Bruno Rafael</div><!--creditos-->
-        </div><!--background-home-->
+            <footer class="creditos">Desenvolvido por Bruno Rafael</footer><!--creditos-->
+        </article><!--background-home-->
     
         <!-- ------------------TELA DE LOGIN-------------------- -->
     
-        <div class="tela-de-login">
+        <article class="tela-de-login">
             <div class="box-form-login">
                 <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
+
                 <form class="box-login">
                     <div class="titulo"><h2>TELA DE LOGIN</h2></div>
         
@@ -198,16 +199,17 @@
                 
                 <p class="ja-possui-conta">Novo por aqui? <button onclick="cadastrar()" class="cadastre-se">Cadastre-se</button></p>
             </div><!--box-form-login-->
-        </div><!--tela de login-->
+        </article><!--tela de login-->
     
         <!-- ------------------TELA DE CADASTRO-------------------- -->
     
-        <div class="tela-de-cadastro">
+        <article class="tela-de-cadastro">
             <div class="box-form-cadastro">
+
                 <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
+
                 <form class="box-cadastro">
-                    <div class="titulo"><h2>TELA DE CADASTRO</h2></div>
-                    
+                    <header class="titulo"><h2>TELA DE CADASTRO</h2></header>                    
                     <div class="inputs-login">
                         <input type="text" id="name-id" placeholder="Nome" maxlength="12" required>
                         <input type="email" id="email-cadastro" placeholder="Email" required>
@@ -232,17 +234,17 @@
 
                 <p class="ja-possui-conta">Já possui uma conta? <button onclick="logar()" class="cadastre-se">Entrar</button></p>
             </div><!--box-form-cadastro-->
-        </div><!--tela de cadastro-->
+        </article><!--tela de cadastro-->
     
         
         <!-- -------------------matérias-------------------- -->
     
-        <div class="background-materia">
+        <article class="background-materia">
             <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
     
-            <div class="header-materias"><h2>Matérias</h2></div><!--header-materias-->
+            <header class="header-materias"><h2>Matérias</h2></header><!--header-materias-->
     
-            <div class="main-materias">
+            <section class="main-materias">
                 <div class="grade-materias">
                     <button class="container-materia"><div class="card"><div class="materia-portugues card_content"></div></div></button>
                     <button class="container-materia"><div class="card"><div class="materia-matematica card_content"></div></div></button>
@@ -265,12 +267,12 @@
                     <button class="container-materia"><div class="card"><div class="materia-redacao card_content"></div></div></button>
                     <button class="container-materia"><div class="card"><div class="materia-enem card_content"></div></div></button>              
                 </div><!--grade-materias-->      
-            </div><!--main-materias-->
+            </section><!--main-materias-->
     
-            <div class="footer-materias">Desenvolvido por Bruno Rafael</div>
-        </div><!--background-materia-->
+            <footer class="footer-materias">Desenvolvido por Bruno Rafael</footer>
+        </article><!--background-materia-->
     
-        <div class="background-conteudo-materias">
+        <article class="background-conteudo-materias">
             <h2 class="titulo-background-conteudo-materias"></h2>
     
             <div class="background-conteudo-materia"></div>
@@ -279,7 +281,7 @@
               
             <button class="criar criars" onclick="criar()"><p>Adicionar</p></button>
     
-            <div class="adicionar-conteudo">
+            <section class="adicionar-conteudo">
                 <div class="inputs-adicionar-conteudo">
                     <input type="text" id="titulo" placeholder="Titulo" maxlength="50">
                     <input type="text" id="sinopse" maxlength="360" placeholder="Sinopse">
@@ -289,20 +291,20 @@
                         <button class="adicionar" onclick="adicionar()">Adicionar</button>
                     </div>
                 </div><!--inputs-adicionar-conteudo--> 
-            </div><!--adicionar-conteudo-->
-        </div><!--background-conteudo-materia-->   
+            </section><!--adicionar-conteudo-->
+        </article><!--background-conteudo-materia-->   
 
-        <div class="tela-conteudo">
+        <article class="tela-conteudo">
             <button class="voltar-materias" onclick="voltar_conteudo()" ><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
             <h2 class="titulo-tela-conteudo"></h2>
             <h4 class="sinopse-tela-conteudo"></h3>
             <p class="texto-tela-conteudo"></p>
-        </div><!--tela-conteudo-->
+        </article><!--tela-conteudo-->
     
     
         <!-- -------------------tela de duvidas---------------------- -->
     
-        <div class="back-alert-duvidas">
+        <article class="back-alert-duvidas">
             <div class="alert-duvida">
                 <textarea  id="pergunta_duvida" cols="45" rows="7" style="resize: none; padding: 10px; border-radius: 5px; margin: 20px 0;" placeholder="Digite sua pergunta:"></textarea>
                 <p class="pergunta-de-duvida" style="display: none; word-wrap: break-word; width: 90%; text-align:center;margin: 10px auto"></p>
@@ -314,9 +316,9 @@
                     <button class="confirmar-alert alert-resposta" onclick="confirmar_alert_duvida_resposta()" style="display:none">CONFIRMAR</button>
                 </div><!--confirmar-->             
             </div><!--alert-duvida-->
-        </div><!--back-alert-duvidas-->
+        </article><!--back-alert-duvidas-->
 
-        <div class="background-duvidas">    
+        <article class="background-duvidas">    
             <button class="button_d button-manual btn-duvidas" onclick="entrar_manual()">?</button>
 
             <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
@@ -333,12 +335,12 @@
 
                 <button class="responder_pergunta" onclick="responder_perguntas()"><p>Responder !</p></button>
             </div><!--perguntas-button-->
-        </div><!--background-duvidas-->
+        </article><!--background-duvidas-->
     
-        <div class="background-redes">
+        <article class="background-redes">
             <button class="voltar-redes" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
     
-            <div class="header-redes">REDES SOCIAIS</div>
+            <header class="header-redes">REDES SOCIAIS</header>
     
             <div class="redes-primarias">
                 <a href="https://www.instagram.com" target="_blank"><button><img src="imagens/instagram.png" alt="">@ade_exemplo</button></a>
@@ -360,7 +362,7 @@
                 
                 <a href="https://www.youtube.com" target="_blank"><button><img src="imagens/youtube.png" alt="">@ade_exemplo</button></a>  
             </div><!--redes-secudarias-->
-        </div><!--background-redes-->
+        </article><!--background-redes-->
         
         <script src="ade.js"></script>
     

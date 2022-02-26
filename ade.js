@@ -1,29 +1,29 @@
 /* -----------------------------VARIAVEIS GLOBAIS------------------------------- */
 
-var background = document.querySelector('div.background-home'); 
-var tela_de_login = document.querySelector('div.tela-de-login');
-var tela_de_cadatro = document.querySelector('div.tela-de-cadastro');
+var background = document.querySelector('.background-home'); 
+var tela_de_login = document.querySelector('.tela-de-login');
+var tela_de_cadatro = document.querySelector('.tela-de-cadastro');
 var login_email = document.querySelector('input#email');
 var login_password = document.querySelector('input#password');
 var email_cadastro = document.getElementById('email-cadastro');
 var password_cadastro = document.getElementById('password-cadastro');
 var password_confirmar = document.getElementById('password-confirmar');
 var name_id = document.getElementById('name-id');
-var tela_alert = document.querySelector('div.fundo-tela-de-alert');
+var tela_alert = document.querySelector('.fundo-tela-de-alert');
 var texto_alert = document.querySelector('p.texto-alert');
-var background_duvidas = document.querySelector('div.background-duvidas');
-var background_redes = document.querySelector('div.background-redes');
-var alterar_senha = document.querySelector('div.alterar-senha');
-var alert_senha = document.querySelector('div.alert-senha');
-var box_alterar = document.querySelector('div.box-alterar-senha');
+var background_duvidas = document.querySelector('.background-duvidas');
+var background_redes = document.querySelector('.background-redes');
+var alterar_senha = document.querySelector('.alterar-senha');
+var alert_senha = document.querySelector('.alert-senha');
+var box_alterar = document.querySelector('.box-alterar-senha');
 var confirmar_para_alterar = document.querySelector('input#confirmar-para-alterar');
 var nova_senha = document.querySelector('input#nova-senha');
 var confirmar_nova_senha = document.querySelector('input#confirmar-nova-senha');
 var alert_atencao = document.querySelector('img.alert-atencao');
 var alert_verificado = document.querySelector('img.alert-verificado');
 var titulo_alert = document.querySelector('h2.titulo-alert');
-var background_conteudo_materias = document.querySelector('div.background-conteudo-materias');
-var tela_conteudo = document.querySelector('div.tela-conteudo');
+var background_conteudo_materias = document.querySelector('.background-conteudo-materias');
+var tela_conteudo = document.querySelector('.tela-conteudo');
 var titulo = document.querySelector('input#titulo');
 var sinopse = document.querySelector('input#sinopse');
 var cont = document.querySelector('textarea#cont');
@@ -100,8 +100,8 @@ function voltar(){
     background.style.display = 'block';
     tela_de_login.style.display = 'none';
     tela_de_cadatro.style.display = 'none';
-    document.querySelector('div.opcoes-perfil').style.display = 'none';
-    document.querySelector('div.background-materia').style.display = 'none';
+    document.querySelector('.opcoes-perfil').style.display = 'none';
+    document.querySelector('.background-materia').style.display = 'none';
     background_duvidas.style.display = 'none';
     background_redes.style.display = 'none';
     alterar_senha.style.display = 'none';
@@ -138,8 +138,8 @@ function enviar_login(){
         background.style.display = 'block';
         tela_de_login.style.display = 'none';
         tela_de_cadatro.style.display = 'none';
-        document.querySelector('div.perfil').style.display = 'flex';
-        document.querySelector('div.login').style.display = 'none';
+        document.querySelector('.perfil').style.display = 'flex';
+        document.querySelector('.login').style.display = 'none';
         if(confirmar_login_professor()){ // recebe o nome colocado no cadastro no perfil
             document.querySelector('button.nome-perfil').innerText = dados_login_professor[3];
         }
@@ -313,7 +313,7 @@ function verificartipo(){ // verifica os inputs radios para saber se é aluno ou
 function professor(){
     if(login[0] == 'logado'){
         if(sit[0] == 'professor' || sit[0]  == 'mestre'){
-            document.querySelector('div.background-materia').style.display = 'block';
+            document.querySelector('.background-materia').style.display = 'block';
             background.style.display = 'none';
             document.querySelector('.header-materias h2').innerText = 'Escolha a matéria para adicionar conteúdo';
             document.querySelector('button.criars').style.display = 'block';
@@ -330,7 +330,7 @@ function professor(){
 }
 function aluno(){
     if(login[0] == 'logado'){
-        document.querySelector('div.background-materia').style.display = 'block';
+        document.querySelector('.background-materia').style.display = 'block';
         background.style.display = 'none';
         document.querySelector('.header-materias h2').innerText = 'Matérias';
         document.querySelector('button.criars').style.display = 'none';
@@ -359,7 +359,7 @@ function redes(){
 
 
 for(let a = 0; a < quant[0]; a++){
-    document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
+    document.querySelector('.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
 }
 load1()
 function criar_perguntas(){
@@ -426,7 +426,7 @@ function responder_perguntas(){
 }
 function load(){
     for(let a = quant[0] - 1; a < quant[0]; a++){
-        document.querySelector('div.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
+        document.querySelector('.back-duvidas').innerHTML += `<div class="container-duvidas"><button class="perguntas">${texto[a]}</button><div class="respostas">${resp[a]}</div></div>`
     }
 }
 function load1(){
@@ -450,16 +450,16 @@ function load1(){
 //-----------------------------PERFIL-------------------------------------
 
 function perfil(){
-    document.querySelector('div.opcoes-perfil').style.display = 'flex';
+    document.querySelector('.opcoes-perfil').style.display = 'flex';
 }
 function sair_perfil(){
     dados[0] = '';
     dados[1] = '';
     login[0] = '';
     sit[0] = '';
-    document.querySelector('div.login').style.display = 'flex';
-    document.querySelector('div.opcoes-perfil').style.display = 'none';
-    document.querySelector('div.perfil').style.display = 'none';
+    document.querySelector('.login').style.display = 'flex';
+    document.querySelector('.opcoes-perfil').style.display = 'none';
+    document.querySelector('.perfil').style.display = 'none';
     document.querySelector('.responder_pergunta').style.display = 'none';
 }
 function senha_perfil(){
@@ -469,13 +469,13 @@ function senha_perfil(){
 }
 function cancelar_alert(){
     alterar_senha.style.display = 'none';
-    document.querySelector('div.opcoes-perfil').style.display = 'none';
+    document.querySelector('.opcoes-perfil').style.display = 'none';
 }
 function confirmar_alert(){
     alterar_senha.style.display = 'flex';
     alert_senha.style.display = 'none';
     box_alterar.style.display = 'flex';
-    document.querySelector('div.opcoes-perfil').style.display = 'none';
+    document.querySelector('.opcoes-perfil').style.display = 'none';
 }
 function confirmar_alterar(){
     if(confirmar_para_alterar.value.length == 0 || nova_senha.value.length == 0 || confirmar_nova_senha.value.length == 0){
@@ -577,8 +577,8 @@ var conteudo_tela = document.querySelector('p.texto-tela-conteudo');
 
 for(let l = 0; l < cont_materia.length; l++){
     cont_materia[l].addEventListener('click', function(){
-        document.querySelector('div.background-conteudo-materias').style.display = 'flex';
-        document.querySelector('div.background-materia').style.display = 'none';
+        document.querySelector('.background-conteudo-materias').style.display = 'flex';
+        document.querySelector('.background-materia').style.display = 'none';
         var matPor = document.querySelectorAll('.materia_portugues');
         var matMat = document.querySelectorAll('.materia_matematica');
         var matBio = document.querySelectorAll('.materia_biologia');
@@ -886,8 +886,8 @@ for(let l = 0; l < cont_materia.length; l++){
     })
 }
 function voltar_materias(){
-    document.querySelector('div.background-materia').style.display = 'block';
-    document.querySelector('div.background-conteudo-materias').style.display = 'none';
+    document.querySelector('.background-materia').style.display = 'block';
+    document.querySelector('.background-conteudo-materias').style.display = 'none';
     materias[0] = 0;
     let materiaGeral = document.querySelectorAll('.card-conteudo');
     for(let i=0; i < materiaGeral.length; i++){
@@ -898,13 +898,13 @@ function voltar_materias(){
 //-----------------------------conteudos-------------------------------------
 
 function criar(){
-    document.querySelector('div.adicionar-conteudo').style.display = 'flex';
+    document.querySelector('.adicionar-conteudo').style.display = 'flex';
     document.querySelector('button.criars').style.display = 'none';
 }
 function voltar_conteudo(){
-    document.querySelector('div.adicionar-conteudo').style.display = 'none';
-    document.querySelector('div.tela-conteudo').style.display = 'none';
-    document.querySelector('div.background-conteudo-materias').style.display = 'flex';
+    document.querySelector('.adicionar-conteudo').style.display = 'none';
+    document.querySelector('.tela-conteudo').style.display = 'none';
+    document.querySelector('.background-conteudo-materias').style.display = 'flex';
     titulo.value = '';
     sinopse.value = '';
     cont.value = '';
