@@ -644,9 +644,9 @@ button.voltar-materias{
 }
 .header-materias{
     width: 100%;
-    height: 20%;
+    height: auto;
     text-align: center;
-    padding: 20px;
+    padding: 15px;
     font-size: clamp(0.3em, 0.5em + 1.5vw, 2em);
     background-image: 
     linear-gradient(to right, #AF40FF, #5B42F3,#00DDEB, #00DDEB);
@@ -801,10 +801,13 @@ button.container-conteudo-materia{
     
 }
 .imagem-conteudo{
-    width: 100%;
-    height: 47%;
+    width: 101%;
+    height: 48%;
     background-color: rgb(5, 6, 45);
     border-radius: 10px;
+    position: relative;
+    top: -2px;
+    left: -1px;
 }
 .titulo-texto-conteudo{
     width: 100%;
@@ -864,7 +867,7 @@ button.criar{
 }
 .inputs-adicionar-conteudo{
     width: 90%;
-    height: 90%;
+    height: auto;
     max-width : 400px;
     display: flex;
     flex-direction: column;
@@ -1196,7 +1199,7 @@ button.voltar-redes{
         display: flex;
     }
     .box-form-login{
-        width: 70%;
+        width: 80%;
     }
     .box-login{
         width: 90%;
@@ -1204,13 +1207,14 @@ button.voltar-redes{
     .box-login input{
         width: 80%;       
     }
-    .box-form-cadastro{
-        width: 70%;
-        padding: 1em 1em;
+    .box-form-cadastro {
+        padding: 1em 0.5em;
+        width: 95%;
     }
     .box-cadastro{
         width: 90%;
     }
+
     .box-cadastro input{
         width: 80%;       
     }
@@ -1218,19 +1222,16 @@ button.voltar-redes{
         width: 13px;
         height: 13px;
     }
+    .header-materias{
+        width: 85%;
+        margin: 0 auto;
+    }
 }
 @media screen and (max-width : 500px){
     .login{
         bottom: 10%;
     }
     .box-form-login{
-        width: 90%;
-    }
-    .box-form-cadastro {
-        padding: 1em 0.5em;
-        width: 95%;
-    }
-    .box-cadastro{
         width: 90%;
     }
     button.voltar{
@@ -1250,12 +1251,6 @@ button.voltar-redes{
     }
     button.container-materia{
         margin: 5px;
-    }
-    .header-materias{
-        height: 20%;
-    }
-    .main-materias{
-        height: 86%;
     }
     .background-redes{
         padding: 20px 25%;
@@ -1348,6 +1343,9 @@ button.voltar-redes{
         font-size: 15px;
     }
     .box-cadastro{
+        height: 90%;
+    }
+    .inputs-adicionar-conteudo{
         height: 90%;
     }
 }

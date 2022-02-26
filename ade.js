@@ -462,11 +462,13 @@ function senha_perfil(){
 }
 function cancelar_alert(){
     alterar_senha.style.display = 'none';
+    document.querySelector('div.opcoes-perfil').style.display = 'none';
 }
 function confirmar_alert(){
     alterar_senha.style.display = 'flex';
     alert_senha.style.display = 'none';
     box_alterar.style.display = 'flex';
+    document.querySelector('div.opcoes-perfil').style.display = 'none';
 }
 function confirmar_alterar(){
     if(confirmar_para_alterar.value.length == 0 || nova_senha.value.length == 0 || confirmar_nova_senha.value.length == 0){
