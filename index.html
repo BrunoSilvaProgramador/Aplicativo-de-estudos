@@ -10,6 +10,44 @@
 <body>
     <body>
         
+        <div class="back-tela-funcionamento">
+            <div class="container-tela">
+                <div class="tela-funcionamento">
+                    <h2>MANUAL DE USO</h2><br>
+                    <h4>Opções habilitadas para cada tipo de usuário:</h4><br>
+                    <h3>Administrador:</h3>
+                    <ul>
+                        <p>Acessar todas as áreas</p>
+                        <p>Adicionar conteúdo</p>
+                        <p>Responder as dúvidas</p>
+                        <p>Realizar perguntas</p>
+                    </ul><br>
+                    <h3>Professor:</h3>
+                    <ul>
+                        <p>Acessar todas as áreas</p>
+                        <p>Adicionar conteúdo</p>
+                        <p>Alterar sua senha</p>
+                        <p>Realizar perguntas</p>
+                    </ul><br>
+                    <h3>Aluno:</h3>
+                    <ul>
+                        <p>Acessar todas as áreas EXCETO a de professores</p>
+                        <p>Alterar sua senha</p>
+                        <p>Realizar perguntas</p>
+                    </ul><br>
+    
+                    <h3>Dados de login de ADMINISTRADOR</h3>
+                    <p>email: emailteste@gmail.com</p>
+                    <p>senha: senhateste</p><br><br>
+
+                    <h5>Este manual estará disponível novamente na área superior direita da seção de dúvidas!</h5>
+
+                    <button class="button_d button-manual" onclick="sair_manual()">OK</button>
+                </div><!--tela-funcionamento-->
+            </div><!--container-tela-->
+        </div><!--back-tela-funcionamento-->
+
+
         <!--Tela de alert, esta é uma alternativa ao alert do js, utitlizada simplesmente como uma personalização-->
     
         <div class="fundo-tela-de-alert">
@@ -147,9 +185,8 @@
     
         <div class="tela-de-login">
             <div class="box-form-login">
+                <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
                 <form class="box-login">
-                    <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button> <!--BOTAO DE VOLTAR-->
-        
                     <div class="titulo"><h2>TELA DE LOGIN</h2></div>
         
                     <div class="inputs-login">
@@ -168,9 +205,8 @@
     
         <div class="tela-de-cadastro">
             <div class="box-form-cadastro">
+                <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
                 <form class="box-cadastro">
-                    <button class="voltar" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
-        
                     <div class="titulo"><h2>TELA DE CADASTRO</h2></div>
                     
                     <div class="inputs-login">
@@ -281,7 +317,9 @@
             </div><!--alert-duvida-->
         </div><!--back-alert-duvidas-->
 
-        <div class="background-duvidas">     
+        <div class="background-duvidas">    
+            <button class="button_d button-manual btn-duvidas" onclick="entrar_manual()">?</button>
+
             <button class="voltar-materias" onclick="voltar()"><img src="imagens/voltar.png" alt=""></button><!--BOTAO VOLTAR-->
     
             <header class="header-duvidas">DÚVIDAS FREQUENTES</header>

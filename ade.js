@@ -70,6 +70,13 @@ var titulosenem = []; var sinopsesenem = []; var contenem = []; // enem
 
 /* -----------------------------FUNÇÕES------------------------------- */
 
+function sair_manual(){
+    document.querySelector('.back-tela-funcionamento').style.display = 'none';
+}
+function entrar_manual(){
+    document.querySelector('.back-tela-funcionamento').style.display = 'flex';
+}
+
 
 /* -------TELAS DE LOGIN, CADASTRO E HOME--------- */
 function logar(){

@@ -23,6 +23,60 @@ body, html{
     scrollbar-color: rgb(65, 63, 63) rgb(65, 63, 63) !important;
     scrollbar-width: none !important;
 }
+.back-tela-funcionamento{
+    width: 100%;
+    height: 100%;
+    background:rgba(0, 0, 0, 0.349);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.container-tela{
+    width: 50%;
+    border-radius: 20px;
+    padding: 2px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    color: rgba(255, 255, 255, 0.753);
+}
+.tela-funcionamento{
+    background: rgb(5, 6, 45);
+    border-radius: 17px;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.tela-funcionamento h2{
+    text-align: center;
+}
+.tela-funcionamento h3{
+    padding-bottom: 5px;
+}
+.tela-funcionamento h5{
+    text-align: center;
+}
+.tela-funcionamento p{
+    padding-left: 20px;
+}
+.button-manual{
+    max-width: 100%;
+    min-width: 70px !important;
+    margin: 15px auto 0 !important;
+    padding: 3px;
+}
+.btn-duvidas{
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    border-radius: 50% !important;
+    padding: 7px 10px !important;
+    min-width: 0 !important;
+}
+
 .fundo-tela-de-alert{
     width: 100%;
     height: 100%;   
@@ -461,7 +515,8 @@ button.voltar{
     border: none;
     cursor: pointer;
     position: absolute;
-    left: 15px;top: 7px;
+    left: 15px !important;
+    top: 13px !important;
 }
 .voltar img{
     width: 20px;
@@ -1176,6 +1231,9 @@ button.voltar-redes{
     }
 }
 @media screen and (max-width : 768px){
+    .container-tela{
+        width: 90%;
+    }
     .box-home {
         width: 130px;
         height: 74px;
